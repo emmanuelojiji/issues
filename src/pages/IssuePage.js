@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Comment from "../components/Comment";
 import NewDiscussion from "../components/NewDiscussion";
-import Panel from "../components/Panel";
+import Panel from "../components/DashboardPanel";
 import "./IssuePage.scss";
 
 const IssuePage = () => {

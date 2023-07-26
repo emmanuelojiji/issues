@@ -2,9 +2,9 @@ import React from "react";
 import IssueInfo from "./IssueInfo";
 import AssignedTo from "./AssignedTo";
 import Calendar from "./Calendar";
-import "./Panel.scss";
+import "./DashboardPanel.scss";
 
-const Panel = ({ userModalVisible, setUserModalVisible }) => {
+const IssuePagePanel = ({ userModalVisible, setUserModalVisible }) => {
   return (
     <aside className="panel">
       <h2>Issues Board</h2>
@@ -21,4 +21,4 @@ const Panel = ({ userModalVisible, setUserModalVisible }) => {
   );
 };
 
-export default Panel;
+export default IssuePagePanel;

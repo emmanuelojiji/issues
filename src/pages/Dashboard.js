@@ -2,16 +2,16 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Comment from "../components/Comment";
 import IssueCard from "../components/IssueCard";
-import Panel from "../components/Panel";
+import DashboardPanel from "../components/DashboardPanel";
 import ToDoItem from "../components/ToDoItem";
 import { Issues } from "../Issues";
 import "./IssuePage.scss";
-import "./Dashboard.scss"
+import "./Dashboard.scss";
 
 const Dashboard = () => {
   return (
     <main className="row-container">
-      <Panel />
+      <DashboardPanel />
       <div className="app-right">
         <div className="issues-card-container container">
           <div className="dashboard-header">
@@ -27,27 +27,14 @@ const Dashboard = () => {
 
         <div className="to-do-container container">
           <h3 className="heading">To do list</h3>
-          <ToDoItem />
-          <ToDoItem />
-          <ToDoItem />
+          <ToDoItem text="Contact supplier for exchange for B-01 part" />
+          <ToDoItem text="Chase reply from Save-Tech" />
+          <ToDoItem text="To do item" />
         </div>
 
-        <div className="discussion-container container">
+        <div className="notification-container container">
           <div className="discussion-header">
-            <h3 className="heading">Discussion</h3>
-            <button>Create new discussion</button>
-          </div>
-
-          <div className="comments-container main-container container">
-            <Comment />
-            <Comment />
-            <Comment />
-          </div>
-
-          <div className="comments-container main-container container">
-            <Comment />
-            <Comment />
-            <Comment />
+            <h3 className="heading">Notifications</h3>
           </div>
         </div>
       </div>

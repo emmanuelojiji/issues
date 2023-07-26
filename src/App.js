@@ -1,6 +1,5 @@
 import "./App.scss";
 import Header from "./components/Header";
-import Panel from "./components/Panel";
 import Comment from "./components/Comment";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import IssuePage from "./pages/IssuePage";

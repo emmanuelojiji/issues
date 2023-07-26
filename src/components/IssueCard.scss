@@ -6,6 +6,13 @@
   border-radius: 15px;
   padding: 25px;
   color: white;
+  display: flex;
+}
+
+.issue-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-container {
@@ -16,4 +23,16 @@
 
 .issues-card-container {
   padding-top: 30px;
+}
+
+.status-pill {
+  background: #c54b4b;
+  width: fit-content;
+  padding: 4px 19px;
+  border-radius: 2em;
+  font-size: 12px;
+}
+
+.issue-card-footer {
+  display: flex;
 }

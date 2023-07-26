@@ -3,7 +3,7 @@
   padding:0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: 'Nunito';
+  font-family: 'Arial';
 }
 
 html,body{
@@ -14,3 +14,10 @@ html,body{
   margin-bottom: 30px;
 }
 
+h1{
+  font-size: 20px;
+}
+
+h2{
+  font-size: 18px;
+}

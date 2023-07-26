@@ -1,9 +1,9 @@
 import React from 'react';
 import "./ToDoItem.scss"
-const ToDoItem = () => {
+const ToDoItem = ({text}) => {
     return (
         <div className='to-do-item'>
-          <p>To do item</p>  
+          <p>{text}</p>  
         </div>
     );
 };
