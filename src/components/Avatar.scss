@@ -3,4 +3,8 @@
   min-width: 30px;
   border-radius: 100%;
   background: grey;
+
+  &:hover{
+    cursor: pointer;
+  }
 }
