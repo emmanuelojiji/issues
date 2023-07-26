@@ -1,0 +1,43 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.report-container {
+  background: #161e28;
+  color: white;
+  padding: 45px;
+
+  .heading {
+    margin-bottom: 45px;
+  }
+
+  .sub-heading {
+    margin-bottom: 20px;
+  }
+}
+
+.discussion-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments-container {
+  width: 100%;
+  background: #161e28;
+  padding: 45px;
+}
+
+.part-container {
+  height: 200px;
+  background: #1a242f;
+  border-radius: 15px;
+  margin-bottom: 45px;
+}
+
+.additional-info {
+  p {
+    color: #687d94;
+  }
+}

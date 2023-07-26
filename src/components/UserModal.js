@@ -2,9 +2,12 @@ import React from "react";
 import Avatar from "./Avatar";
 import "./UserModal.scss";
 
-const UserModal = () => {
+const UserModal = ({ setUserModalVisible }) => {
   return (
-    <div className="user-modal-container">
+    <div
+      className="user-modal-container"
+      onClick={() => setUserModalVisible(false)}
+    >
       <div className="user-modal">
         <Avatar />
       </div>

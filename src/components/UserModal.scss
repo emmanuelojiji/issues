@@ -1,0 +1,18 @@
+.user-modal-container {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-modal {
+  height: 300px;
+  width: 500px;
+  background: white;
+}
