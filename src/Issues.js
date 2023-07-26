@@ -4,9 +4,9 @@ export const Issues = [
     id: "wrong_condition",
     resolved: false,
     assignees: [
-      { name: "Assignee 1", avatar: "avatar 1" },
-      { name: "Assignee 2", avatar: "avatar 2" },
-      { name: "Assignee 3", avatar: "avatar 3" },
+      { id: 1, name: "Assignee 1", avatar: "avatar 1" },
+      { id: 2, name: "Assignee 2", avatar: "avatar 2" },
+      { id: 3, name: "Assignee 3", avatar: "avatar 3" },
     ],
   },
   {

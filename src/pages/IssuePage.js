@@ -12,7 +12,6 @@ const IssuePage = () => {
   const [newCommentVisible, setNewCommentVisible] = useState(false);
 
   const [userModalVisible, setUserModalVisible] = useState(false);
-  
 
   return (
     <>

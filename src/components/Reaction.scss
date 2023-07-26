@@ -10,8 +10,8 @@
 }
 
 .reaction-icon {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   background: #283647;
   border-radius: 500px;
   cursor: pointer;
@@ -24,7 +24,7 @@
 
 .current-reaction {
   width: 65px;
-  height: 35px;
+  height: 25px;
   background: #007ad4;
   border-radius: 500px;
   display: flex;
@@ -46,7 +46,7 @@
   background: #283647;
   border-radius: 500px;
   position: absolute;
-  top: 50px;
+  top: 25px;
   left: 25px;
   display: flex;
   align-items: center;

@@ -9,7 +9,7 @@ const UserModal = ({ setUserModalVisible }) => {
       onClick={() => setUserModalVisible(false)}
     >
       <div className="user-modal">
-        <Avatar />
+        <Avatar size="80px" />
       </div>
     </div>
   );

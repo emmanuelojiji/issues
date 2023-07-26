@@ -6,7 +6,7 @@ import Reaction from "./Reaction";
 const Comment = () => {
   return (
     <div className="comment-container">
-      <Avatar />
+      <Avatar size="30px" />
 
       <div className="right">
         <h4>Ali Alnaimi</h4>
