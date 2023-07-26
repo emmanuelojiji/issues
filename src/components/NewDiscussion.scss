@@ -1,0 +1,22 @@
+.new-comment {
+  height: 300px;
+  border: 1px #007ad4 dashed;
+  border-radius: 10px;
+  margin-bottom: 50px;
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: 0;
+    padding: 45px;
+    color: white;
+    outline: none;
+    resize: none;
+
+    &::placeholder {
+      color: #007ad4;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.App {
+  background: #111821;
+  padding: 0 2%;
+}
+
+.app-right {
+  flex: 1;
+  color: white;
+  height: 100vh;
+  overflow: scroll;
+
+}
+
+.row-container {
+  display: flex;
+}
+
+//Right
+
+.main-container {
+  margin-bottom: 50px;
+}
+
+.app-right-header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  background: #111821;
+  z-index: 1;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.report-container {
+  background: #161e28;
+  color: white;
+  padding: 45px;
+  
+}
+
+.discussion-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments-container {
+  width: 100%;
+  background: #161e28;
+  padding: 45px;
+}
+
+.container{
+  border-radius: 25px;
+  margin-bottom: 100px;
+}
+
