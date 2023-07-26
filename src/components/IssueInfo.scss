@@ -1,11 +1,14 @@
 .issue-info {
   color: white;
   background: #b02e34;
-  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding:20px;
+  padding:25px 20px;
   border-radius: 20px;
   margin-top: 30px;
+
+  h3{
+    margin-bottom: 10px;
+  }
 }
