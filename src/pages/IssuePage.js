@@ -14,6 +14,8 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
 
   const [userModalVisible, setUserModalVisible] = useState(false);
 
+  const selectedIssue = Issues.find((issue) => issue.id === id);
+
   return (
     <>
       {userModalVisible && (
@@ -42,14 +44,12 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
             <h3 className="heading">Report</h3>
 
             <div className="part-container">
-              {Issues.map((issue) =>
-                issue.fields.map((field, fieldIndex) => (
-                  <div key={fieldIndex} className="row">
-                    <h2>{field.heading}</h2>
-                    <p>{field.content}</p>
-                  </div>
-                ))
-              )}
+              {selectedIssue.fields.map((field, fieldIndex) => (
+                <div key={fieldIndex} className="row">
+                  <h2>{field.heading}</h2>
+                  <p>{field.content}</p>
+                </div>
+              ))}
             </div>
 
             <div className="additional-info">
