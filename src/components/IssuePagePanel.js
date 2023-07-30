@@ -9,12 +9,13 @@ const IssuePagePanel = ({
   setUserModalVisible,
   selectedUser,
   setSelectedUser,
+  issueId,
 }) => {
   return (
     <aside className="panel">
       <h2>Issues Board</h2>
       <h2 className="job-number">SG-J23937</h2>
-      <IssueInfo />
+      <IssueInfo issueId={issueId} />
       <AssignedTo
         userModalVisible={userModalVisible}
         setUserModalVisible={setUserModalVisible}

@@ -30,6 +30,7 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
           setUserModalVisible={setUserModalVisible}
           selectedUser={selectedUser}
           setSelectedUser={setSelectedUser}
+          issueId={id}
         />
         <div className="app-right">
           <div className="app-right-header">
@@ -74,17 +75,13 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
 
             <NewDiscussion />
 
-            <div className="comments-container main-container container">
-              <Comment />
-              <Comment />
-              <Comment />
-            </div>
-
-            <div className="comments-container main-container container">
-              <Comment />
-              <Comment />
-              <Comment />
-            </div>
+            {selectedIssue.discussions.map((discussion) => (
+              <div className="comments-container main-container container">
+                {discussion.map((comment) => (
+                  <Comment name={comment.name} message={comment.message} />
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </main>

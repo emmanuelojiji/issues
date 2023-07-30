@@ -1,3 +1,5 @@
+import { Users } from "./Users";
+
 export const Issues = [
   {
     title: "Wrong Condition",
@@ -22,13 +24,24 @@ export const Issues = [
         content: "Broken",
       },
     ],
+
+    discussions: [
+      [
+        { message: "This is the first comment", id: 1, name: "Ali" },
+        { message: "This is the second comment", id: 2, name: "Sontaya" },
+      ],
+      [
+        { messaget: "This is the first comment", id: 3, name: "Rocio" },
+        { message: "This is the second comment", id: 4, name: "Clement" },
+      ],
+    ],
   },
 
   {
     title: "Damaged Parts",
     id: "damaged_parts",
     resolved: false,
-    assignees: [{ id: 1 }, { id: 2 }, { id: 3 }],
+    assignees: [{ id: 1 }, { id: 2 }],
     fields: [
       {
         heading: "Damaged Line",
@@ -42,7 +55,6 @@ export const Issues = [
         heading: "Quantity",
         content: "3",
       },
-      
     ],
   },
 ];
