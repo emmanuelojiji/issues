@@ -3,8 +3,10 @@
   min-width: 30px;
   border-radius: 100%;
   background: grey;
+  background-size: cover;
+  background-position: center;
 
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }

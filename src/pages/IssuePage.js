@@ -5,8 +5,9 @@ import NewDiscussion from "../components/NewDiscussion";
 import IssuePagePanel from "../components/IssuePagePanel";
 import "./IssuePage.scss";
 import UserModal from "../components/UserModal";
+import { Issues } from "../Issues";
 
-const IssuePage = () => {
+const IssuePage = ({ selectedUser, setSelectedUser }) => {
   const { id } = useParams();
 
   const [newCommentVisible, setNewCommentVisible] = useState(false);
@@ -16,12 +17,17 @@ const IssuePage = () => {
   return (
     <>
       {userModalVisible && (
-        <UserModal setUserModalVisible={setUserModalVisible} />
+        <UserModal
+          setUserModalVisible={setUserModalVisible}
+          selectedUser={selectedUser}
+        />
       )}
       <main className="row-container">
         <IssuePagePanel
           userModalVisible={userModalVisible}
           setUserModalVisible={setUserModalVisible}
+          selectedUser={selectedUser}
+          setSelectedUser={setSelectedUser}
         />
         <div className="app-right">
           <div className="app-right-header">
@@ -35,7 +41,16 @@ const IssuePage = () => {
           <div className="report-container main-container container">
             <h3 className="heading">Report</h3>
 
-            <div className="part-container"></div>
+            <div className="part-container">
+              {Issues.map((issue) =>
+                issue.fields.map((field, fieldIndex) => (
+                  <div key={fieldIndex} className="row">
+                    <h2>{field.heading}</h2>
+                    <p>{field.content}</p>
+                  </div>
+                ))
+              )}
+            </div>
 
             <div className="additional-info">
               <h3 className="sub-heading">Additional Info</h3>

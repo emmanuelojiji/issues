@@ -34,6 +34,8 @@
   background: #1a242f;
   border-radius: 15px;
   margin-bottom: 45px;
+  padding-top: 25px;
+  padding-left: 25px;
 }
 
 .additional-info {
@@ -41,3 +43,11 @@
     color: #687d94;
   }
 }
+
+.row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+

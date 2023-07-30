@@ -4,7 +4,12 @@ import AssignedTo from "./AssignedTo";
 import Calendar from "./Calendar";
 import "./DashboardPanel.scss";
 
-const IssuePagePanel = ({ userModalVisible, setUserModalVisible }) => {
+const IssuePagePanel = ({
+  userModalVisible,
+  setUserModalVisible,
+  selectedUser,
+  setSelectedUser,
+}) => {
   return (
     <aside className="panel">
       <h2>Issues Board</h2>
@@ -13,6 +18,8 @@ const IssuePagePanel = ({ userModalVisible, setUserModalVisible }) => {
       <AssignedTo
         userModalVisible={userModalVisible}
         setUserModalVisible={setUserModalVisible}
+        selectedUser={selectedUser}
+        setSelectedUser={setSelectedUser}
       />
       <Calendar />
       <Calendar />

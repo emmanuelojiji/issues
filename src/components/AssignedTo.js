@@ -2,8 +2,14 @@ import React from "react";
 import { Issues } from "../Issues";
 import "./AssignedTo.scss";
 import Avatar from "./Avatar";
+import { Users } from "../Users";
 
-const AssignedTo = ({ userModalVisible, setUserModalVisible }) => {
+const AssignedTo = ({
+  userModalVisible,
+  setUserModalVisible,
+  setSelectedUser,
+  selectedUser,
+}) => {
   const targetIssue = Issues.find((issue) => issue.id === "wrong_condition");
 
   return (
@@ -12,9 +18,11 @@ const AssignedTo = ({ userModalVisible, setUserModalVisible }) => {
       <div className="avatar-container">
         {targetIssue.assignees.map((assignee) => (
           <Avatar
+            avatarImage={Users}
+            setUserModalVisible={setUserModalVisible}
             onClick={() => {
+              setSelectedUser(assignee.id);
               setUserModalVisible(true);
-              console.log(assignee.name);
             }}
           />
         ))}
