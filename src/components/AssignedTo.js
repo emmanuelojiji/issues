@@ -24,6 +24,7 @@ const AssignedTo = ({ setUserModalVisible, setSelectedUser }) => {
               setSelectedUser(assignee.id);
               setUserModalVisible(true);
             }}
+            opacity={!assignee.available && "0.3"}
           />
         ))}
       </div>

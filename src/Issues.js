@@ -5,7 +5,13 @@ export const Issues = [
     title: "Wrong Condition",
     id: "wrong_condition",
     resolved: false,
-    assignees: [{ id: 1 }, { id: 2 }, { id: 3 }],
+    assignees: [
+      { id: 1, available: true },
+      { id: 2, available: true },
+      { id: 3, available: true },
+      { id: 4, available: false },
+      { id: 5, available: false },
+    ],
     fields: [
       {
         heading: "Part Number",

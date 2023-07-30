@@ -5,6 +5,7 @@ const Avatar = ({
   onClick,
   size,
   avatarImage,
+  opacity,
   setUserModalVisible,
   selectUser,
 }) => {
@@ -12,7 +13,12 @@ const Avatar = ({
     <div
       className="avatar"
       onClick={onClick}
-      style={{ width: size, height: size, background: `url(${avatarImage}` }}
+      style={{
+        width: size,
+        height: size,
+        background: `url(${avatarImage}`,
+        opacity: opacity,
+      }}
     ></div>
   );
 };
