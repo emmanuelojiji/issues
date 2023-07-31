@@ -1,6 +1,6 @@
 export const Notifications = [
   {
-    message: <b>Tracking Email sent</b>,
+    message: <p>Tracking Email sent</p>,
     date: "today",
   },
 
@@ -25,8 +25,9 @@ export const Notifications = [
   {
     message: (
       <p>
-        This job was split into SG-J24853 - C1 and 2 buying lines were added:
-        1FT-5066-1AF71-3EB0 1FT5044-1AF71-3EB0.
+        This job was split into <b>SG-J24853 - C1</b> and <b>2 buying lines</b>{" "}
+        were added:
+        <b>1FT-5066-1AF71-3EB0 1FT5044-1AF71-3EB0.</b>
       </p>
     ),
     date: "May 18 2023",
