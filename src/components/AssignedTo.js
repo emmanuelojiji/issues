@@ -18,10 +18,8 @@ const AssignedTo = ({ setUserModalVisible, setSelectedUser }) => {
               key={assignee.id}
               avatarImage={user ? user.avatar : null}
               setUserModalVisible={setUserModalVisible}
-              onClick={() => {
-                setSelectedUser(assignee.id);
-                setUserModalVisible(true);
-              }}
+              setSelectedUser={setSelectedUser}
+              userId={user.id}
               opacity={!assignee.available && "0.3"}
             />
           );

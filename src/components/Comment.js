@@ -9,18 +9,16 @@ const Comment = ({
   avatarImage,
   setUserModalVisible,
   setSelectedUser,
-  selecteduser,
-  changeUser
+  userId
 }) => {
   return (
     <div className="comment-container">
       <Avatar
         size="30px"
         avatarImage={avatarImage}
-        onClick={() => {
-          setUserModalVisible(true);
-          setSelectedUser(changeUser);
-        }}
+        setUserModalVisible={setUserModalVisible}
+        setSelectedUser={setSelectedUser}
+        userId={userId}
       />
 
       <div className="right">

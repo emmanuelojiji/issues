@@ -91,11 +91,13 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
                   return (
                     <Comment
                       setUserModalVisible={setUserModalVisible}
+                      setSelectedUser={setSelectedUser}
                       selecteduser={selectedUser}
                       changeUser={user.id}
                       name={comment.name}
                       message={comment.message}
                       avatarImage={user.avatar}
+                      userId={user.id}
                     />
                   );
                 })}

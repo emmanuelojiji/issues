@@ -4,7 +4,7 @@ import { Users } from "../Users";
 import "./Calendar.scss";
 import DateCard from "./DateCard";
 
-const Calendar = ({ issueId }) => {
+const Calendar = ({ issueId, setUserModalVisible, setSelectedUser }) => {
   const selectedIssue = Issues.find((issue) => issue.id === issueId);
 
   const assignees = selectedIssue.assignees;
@@ -25,6 +25,9 @@ const Calendar = ({ issueId }) => {
               key={user.id}
               dateRange={user.dates}
               avatarImage={user.avatar}
+              userId={user.id}
+              setUserModalVisible={setUserModalVisible}
+              setSelectedUser={setSelectedUser}
             />
           );
         }

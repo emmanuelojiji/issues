@@ -6,11 +6,17 @@ const Avatar = ({
   size,
   avatarImage,
   opacity,
+  setUserModalVisible,
+  setSelectedUser,
+  userId,
 }) => {
   return (
     <div
       className="avatar"
-      onClick={onClick}
+      onClick={() => {
+        setUserModalVisible(true);
+        setSelectedUser(userId);
+      }}
       style={{
         width: size,
         height: size,

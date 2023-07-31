@@ -10,6 +10,6 @@ export const Users = [
   { id: 2, name: "Sontaya", avatar: sontaya },
   { id: 3, name: "Rocio Perez", avatar: rocio },
   { id: 4, name: "Clement ng", avatar: clement, dates: ["20th - 30th"] },
-  { id: 5, name: "Patrick WEBER", avatar: patrick, dates: ["20th - 30th"] },
+  { id: 5, name: "Patrick Weber", avatar: patrick, dates: ["20th - 30th"] },
   { id: 6, name: "Rob", avatar: rob, dates: ["20th - 30th"] },
 ];
