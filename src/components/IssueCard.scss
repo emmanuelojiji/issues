@@ -7,6 +7,11 @@
   padding: 25px;
   color: white;
   display: flex;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
 }
 
 .issue-card-content {
@@ -17,9 +22,8 @@
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-gap: 30px;
-
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
 .issues-card-container {
@@ -27,11 +31,23 @@ gap: 30px;
 }
 
 .status-pill {
-  background: #c54b4b;
   width: fit-content;
   padding: 4px 19px;
   border-radius: 2em;
   font-size: 12px;
+  text-transform: capitalize;
+
+  &.unresolved {
+    background: #c54b4b;
+  }
+
+  &.closed {
+    background: grey;
+  }
+
+  &.resolved {
+    background: #60a350;
+  }
 }
 
 .issue-card-footer {

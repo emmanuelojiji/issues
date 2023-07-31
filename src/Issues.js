@@ -4,7 +4,7 @@ export const Issues = [
   {
     title: "Wrong Condition",
     id: "wrong_condition",
-    resolved: false,
+    status: "unresolved",
     assignees: [
       { id: 1, available: true },
       { id: 2, available: true },
@@ -46,14 +46,17 @@ export const Issues = [
           name: "Clement Ng",
         },
         {
-          message:
-            "@rocio.perez @kelvin.rhodes FYI",
+          message: "@rocio.perez @kelvin.rhodes FYI",
           id: 5,
           name: "Patrick Weber",
         },
       ],
       [
-        { message: "Can someone pick this up next week, I’ll be on holiday.", id: 3, name: "Rocio" },
+        {
+          message: "Can someone pick this up next week, I’ll be on holiday.",
+          id: 3,
+          name: "Rocio",
+        },
         { message: "No worries, I’ll get it sorted.", id: 4, name: "Clement" },
       ],
     ],
@@ -62,7 +65,7 @@ export const Issues = [
   {
     title: "Damaged Parts",
     id: "damaged_parts",
-    resolved: false,
+    status: "closed",
     assignees: [{ id: 1 }, { id: 2 }],
     fields: [
       {
@@ -82,7 +85,7 @@ export const Issues = [
   {
     title: "Damaged Parts",
     id: "damaged_parts",
-    resolved: false,
+    status: "unresolved",
     assignees: [{ id: 1 }, { id: 2 }],
     fields: [
       {
@@ -102,7 +105,7 @@ export const Issues = [
   {
     title: "Damaged Parts",
     id: "damaged_parts",
-    resolved: false,
+    status: "resolved",
     assignees: [{ id: 1 }, { id: 2 }],
     fields: [
       {
@@ -122,7 +125,7 @@ export const Issues = [
   {
     title: "Damaged Parts",
     id: "damaged_parts",
-    resolved: false,
+    status: "resolved",
     assignees: [{ id: 1 }, { id: 2 }],
     fields: [
       {

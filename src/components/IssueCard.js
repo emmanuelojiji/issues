@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import Avatar from "./Avatar";
 import "./IssueCard.scss";
 
-const IssueCard = ({ title, id }) => {
+const IssueCard = ({ title, id, status }) => {
   return (
     <Link to={`/issue/${id}`} className="issue-card">
       <div className="issue-card-content">
         <div className="issue-card-header">
-          <div className="status-pill">Unresolved</div>
+          <div className={`status-pill ${status}`}>{status}</div>
         </div>
         <h3>{title}</h3>
         <div className="issue-card-footer">

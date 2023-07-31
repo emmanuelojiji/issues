@@ -22,7 +22,11 @@ const Dashboard = () => {
           </div>
           <div className="card-container">
             {Issues.map((issue) => (
-              <IssueCard id={issue.id} title={issue.title} />
+              <IssueCard
+                id={issue.id}
+                title={issue.title}
+                status={issue.status}
+              />
             ))}
           </div>
         </div>
