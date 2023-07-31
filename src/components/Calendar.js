@@ -17,13 +17,16 @@ const Calendar = ({ issueId }) => {
     assignedUserIds.includes(user.id)
   );
 
+  const usersWithDates = assignedUsers.filter((user) => user.dates);
+
+
   return (
     <div className="calendar">
       <div className="calendar-header">
         <h3>Calendar</h3>
         <p>This week</p>
       </div>
-      {assignedUsers.map((user) => (
+      {usersWithDates.map((user) => (
         <DateCard dateRange={user.dates} avatarImage={user.avatar} />
       ))}
     </div>
