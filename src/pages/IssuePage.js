@@ -6,6 +6,7 @@ import IssuePagePanel from "../components/IssuePagePanel";
 import "./IssuePage.scss";
 import UserModal from "../components/UserModal";
 import { Issues } from "../Issues";
+import { Users } from "../Users";
 
 const IssuePage = ({ selectedUser, setSelectedUser }) => {
   const { id } = useParams();
@@ -15,6 +16,12 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
   const [userModalVisible, setUserModalVisible] = useState(false);
 
   const selectedIssue = Issues.find((issue) => issue.id === id);
+
+  const selectedIssueDiscussions = selectedIssue.discussions;
+
+  const userId = selectedIssueDiscussions.map((comment) => comment.id);
+
+  console.log(userId);
 
   return (
     <>
@@ -79,9 +86,19 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
 
             {selectedIssue.discussions.map((discussion) => (
               <div className="comments-container main-container container">
-                {discussion.map((comment) => (
-                  <Comment name={comment.name} message={comment.message} />
-                ))}
+                {discussion.map((comment) => {
+                  const user = Users.find((u) => u.id === comment.id);
+                  return (
+                    <Comment
+                      setUserModalVisible={setUserModalVisible}
+                      selecteduser={selectedUser}
+                      changeUser={user.id}
+                      name={comment.name}
+                      message={comment.message}
+                      avatarImage={user.avatar}
+                    />
+                  );
+                })}
               </div>
             ))}
           </div>

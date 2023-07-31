@@ -33,12 +33,28 @@ export const Issues = [
 
     discussions: [
       [
-        { message: "This is the first comment", id: 1, name: "Ali" },
-        { message: "This is the second comment", id: 2, name: "Sontaya" },
+        {
+          message:
+            "Hello, we have received this part from pos B-01 without a cover. Please check the pictures attached in the report.",
+          id: 1,
+          name: "Ali Alnaimi ",
+        },
+        {
+          message:
+            "Customer won't accept that, please contact supplier for an exchange @sontaya.petch.ang",
+          id: 4,
+          name: "Clement Ng",
+        },
+        {
+          message:
+            "@rocio.perez @kelvin.rhodes FYI",
+          id: 5,
+          name: "Patrick Weber",
+        },
       ],
       [
-        { messaget: "This is the first comment", id: 3, name: "Rocio" },
-        { message: "This is the second comment", id: 4, name: "Clement" },
+        { message: "Can someone pick this up next week, I’ll be on holiday.", id: 3, name: "Rocio" },
+        { message: "No worries, I’ll get it sorted.", id: 4, name: "Clement" },
       ],
     ],
   },

@@ -12,23 +12,24 @@ const Calendar = ({ issueId }) => {
   // Get the user IDs assigned to the selected issue
   const assignedUserIds = assignees.map((assignee) => assignee.id);
 
-  // Filter the Users array to get only the users with IDs present in the assignees array
-  const assignedUsers = Users.filter((user) =>
-    assignedUserIds.includes(user.id)
-  );
-
-  const usersWithDates = assignedUsers.filter((user) => user.dates);
-
-
   return (
     <div className="calendar">
       <div className="calendar-header">
         <h3>Calendar</h3>
         <p>This week</p>
       </div>
-      {usersWithDates.map((user) => (
-        <DateCard dateRange={user.dates} avatarImage={user.avatar} />
-      ))}
+      {Users.map((user) => {
+        if (assignedUserIds.includes(user.id) && user.dates) {
+          return (
+            <DateCard
+              key={user.id}
+              dateRange={user.dates}
+              avatarImage={user.avatar}
+            />
+          );
+        }
+        return null;
+      })}
     </div>
   );
 };

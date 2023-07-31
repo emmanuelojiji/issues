@@ -7,26 +7,25 @@ import { Users } from "../Users";
 const AssignedTo = ({ setUserModalVisible, setSelectedUser }) => {
   const targetIssue = Issues.find((issue) => issue.id === "wrong_condition");
 
-  const getUserAvatar = (assignee) => {
-    const user = Users.find((user) => user.id === assignee.id);
-    return user.avatar;
-  };
-
   return (
     <div className="assigned-to">
       <h3>Assigned To</h3>
       <div className="avatar-container">
-        {targetIssue.assignees.map((assignee) => (
-          <Avatar
-            avatarImage={getUserAvatar(assignee)}
-            setUserModalVisible={setUserModalVisible}
-            onClick={() => {
-              setSelectedUser(assignee.id);
-              setUserModalVisible(true);
-            }}
-            opacity={!assignee.available && "0.3"}
-          />
-        ))}
+        {targetIssue.assignees.map((assignee) => {
+          const user = Users.find((user) => user.id === assignee.id);
+          return (
+            <Avatar
+              key={assignee.id}
+              avatarImage={user ? user.avatar : null}
+              setUserModalVisible={setUserModalVisible}
+              onClick={() => {
+                setSelectedUser(assignee.id);
+                setUserModalVisible(true);
+              }}
+              opacity={!assignee.available && "0.3"}
+            />
+          );
+        })}
       </div>
     </div>
   );

@@ -3,10 +3,25 @@ import "./Comment.scss";
 import Avatar from "./Avatar";
 import Reaction from "./Reaction";
 
-const Comment = ({ name, message }) => {
+const Comment = ({
+  name,
+  message,
+  avatarImage,
+  setUserModalVisible,
+  setSelectedUser,
+  selecteduser,
+  changeUser
+}) => {
   return (
     <div className="comment-container">
-      <Avatar size="30px" />
+      <Avatar
+        size="30px"
+        avatarImage={avatarImage}
+        onClick={() => {
+          setUserModalVisible(true);
+          setSelectedUser(changeUser);
+        }}
+      />
 
       <div className="right">
         <h4>{name}</h4>
