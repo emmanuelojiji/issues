@@ -22,9 +22,8 @@ const IssuePagePanel = ({
         selectedUser={selectedUser}
         setSelectedUser={setSelectedUser}
       />
-      <Calendar />
-      <Calendar />
-      <Calendar />
+      <Calendar issueId={issueId} />
+     
     </aside>
   );
 };

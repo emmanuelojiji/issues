@@ -2,14 +2,14 @@ import React from "react";
 import Avatar from "./Avatar";
 import "./DateCard.scss";
 
-const DateCard = () => {
+const DateCard = ({dateRange, avatarImage}) => {
   return (
     <div className="date-card">
       <div>
         <h3>Out of office</h3>
-        <p>Date range</p>
+        <p>{dateRange}</p>
       </div>
-      <Avatar />
+      <Avatar avatarImage={avatarImage} />
     </div>
   );
 };

@@ -6,8 +6,6 @@ const Avatar = ({
   size,
   avatarImage,
   opacity,
-  setUserModalVisible,
-  selectUser,
 }) => {
   return (
     <div

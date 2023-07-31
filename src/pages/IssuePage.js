@@ -10,7 +10,7 @@ import { Issues } from "../Issues";
 const IssuePage = ({ selectedUser, setSelectedUser }) => {
   const { id } = useParams();
 
-  const [newCommentVisible, setNewCommentVisible] = useState(false);
+  const [newDiscussionVisible, setNewDiscussionVisible] = useState();
 
   const [userModalVisible, setUserModalVisible] = useState(false);
 
@@ -70,10 +70,12 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
           <div className="discussion-container container">
             <div className="discussion-header">
               <h3 className="heading">Discussion</h3>
-              <button>Create new discussion</button>
+              <button onClick={() => setNewDiscussionVisible(true)}>
+                Create new discussion
+              </button>
             </div>
 
-            <NewDiscussion />
+            {newDiscussionVisible && <NewDiscussion />}
 
             {selectedIssue.discussions.map((discussion) => (
               <div className="comments-container main-container container">
