@@ -7,6 +7,8 @@ import ToDoItem from "../components/ToDoItem";
 import { Issues } from "../Issues";
 import "./IssuePage.scss";
 import "./Dashboard.scss";
+import SystemNotification from "../components/Notification";
+import { Notifications } from "../Notifications";
 
 const Dashboard = () => {
   return (
@@ -26,7 +28,10 @@ const Dashboard = () => {
         </div>
 
         <div className="to-do-container container">
-          <h3 className="heading">To do list</h3>
+          <div className="to-do-header">
+            <h3 className="heading">To do list</h3>
+            <button>Create to do</button>
+          </div>
           <ToDoItem text="Contact supplier for exchange for B-01 part" />
           <ToDoItem text="Chase reply from Save-Tech" />
           <ToDoItem text="To do item" />
@@ -36,6 +41,10 @@ const Dashboard = () => {
           <div className="discussion-header">
             <h3 className="heading">Notifications</h3>
           </div>
+
+          {Notifications.map((notification) => (
+            <SystemNotification message={notification.message} />
+          ))}
         </div>
       </div>
     </main>

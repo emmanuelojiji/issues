@@ -1,10 +1,10 @@
 import React from "react";
-import "./Filter.scss";
+import "./FilterPill.scss";
 
-const Filter = () => {
+const FilterPill = ({text}) => {
   return <div className="filter-pill">
-    Filter
+    {text}
   </div>;
 };
 
-export default Filter;
+export default FilterPill;

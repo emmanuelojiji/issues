@@ -9,7 +9,7 @@ const Comment = ({
   avatarImage,
   setUserModalVisible,
   setSelectedUser,
-  userId
+  userId,
 }) => {
   return (
     <div className="comment-container">

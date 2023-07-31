@@ -1,11 +1,14 @@
 import React from "react";
 import "./Notification.scss";
 
-const Notification = ({ type }) => {
-  let type;
-  return <div className="notification">
-    <div className="icon"></div>
-  </div>;
+const SystemNotification = ({ type, message }) => {
+  
+  return (
+    <div className="notification">
+      <div className="icon"></div>
+      {message}
+    </div>
+  );
 };
 
-export default Notification;
+export default SystemNotification;

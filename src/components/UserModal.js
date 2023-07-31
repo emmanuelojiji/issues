@@ -3,9 +3,8 @@ import Avatar from "./Avatar";
 import "./UserModal.scss";
 import { Users } from "../Users";
 
-const UserModal = ({ selectedUser, setUserModalVisible, username }) => {
+const UserModal = ({ selectedUser, setUserModalVisible }) => {
   const user = Users.find((user) => user.id === selectedUser);
-  
 
   return (
     <div

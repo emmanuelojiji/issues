@@ -9,7 +9,7 @@ const Calendar = ({ issueId, setUserModalVisible, setSelectedUser }) => {
 
   const assignees = selectedIssue.assignees;
 
-  // Get the user IDs assigned to the selected issue
+
   const assignedUserIds = assignees.map((assignee) => assignee.id);
 
   return (
