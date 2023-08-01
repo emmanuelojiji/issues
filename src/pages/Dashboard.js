@@ -11,6 +11,7 @@ import SystemNotification from "../components/Notification";
 import { Notifications } from "../Notifications";
 import ToDoList from "../components/ToDoList";
 import DiscussionNotification from "../components/DiscussionNotification";
+import { Users } from "../Users";
 
 const Dashboard = () => {
   return (
@@ -40,23 +41,35 @@ const Dashboard = () => {
             <h3 className="heading">Notifications</h3>
           </div>
 
-          {Notifications.map((notification) => (
-            <>
-              {notification.type === "system" && (
-                <SystemNotification message={notification.message} />
-              )}
+          {Notifications.map((notification) => {
+            return (
+              <>
+                {notification.type === "system" && (
+                  <SystemNotification message={notification.message} />
+                )}
 
-              {notification.type === "discussion" &&
-                notification.discussions.map((discussion) => (
-                  <DiscussionNotification
-                    message={discussion.message}
-                    name={discussion.name}
-                    replyName={discussion.replies[0].name}
-                    replyMessage={discussion.replies[0].message}
-                  />
-                ))}
-            </>
-          ))}
+                {notification.type === "discussion" &&
+                  notification.discussions.map((discussion) => {
+                    const originalUser = Users.find(
+                      (user) => user.id === discussion.id
+                    );
+                    const replyUser = Users.find(
+                      (user) => user.id === discussion.replies[0].id
+                    );
+                    return (
+                      <DiscussionNotification
+                        message={discussion.message}
+                        name={discussion.name}
+                        replyName={discussion.replies[0].name}
+                        replyMessage={discussion.replies[0].message}
+                        originalUserAvatarImage={originalUser.avatar}
+                        replyAvatarImage={replyUser.avatar}
+                      />
+                    );
+                  })}
+              </>
+            );
+          })}
         </div>
       </div>
     </main>
