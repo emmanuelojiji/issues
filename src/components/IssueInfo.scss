@@ -4,11 +4,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding:35px 20px;
+  padding: 35px 20px;
   border-radius: 20px;
   margin-top: 30px;
+  transition: 0.2s ease-in-out;
 
-  h3{
+  h3 {
     margin-bottom: 10px;
+  }
+
+  &.unresolved {
+    background: #b02e34;
+  }
+
+  &.resolved {
+    background: #60a350;
   }
 }

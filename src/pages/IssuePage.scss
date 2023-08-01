@@ -4,6 +4,11 @@
   margin-bottom: 20px;
 }
 
+.nav-container-right {
+  display: flex;
+  gap: 50px;
+}
+
 .report-container {
   background: #161e28;
   color: white;
@@ -50,4 +55,26 @@
   margin-bottom: 10px;
 }
 
+.mark-as-complete-container {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+}
+.mark-as-complete-circle {
+  height: 20px;
+  width: 20px;
+  border: solid 1px white;
+  border-radius: 100%;
 
+  &:hover{
+    background: green;
+  }
+}
+
+
+.attachments{
+ img{
+  margin-right: 25px;
+  border-radius: 10px;
+ }
+}

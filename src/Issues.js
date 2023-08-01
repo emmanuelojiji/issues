@@ -1,4 +1,6 @@
 import { Users } from "./Users";
+import part_1 from "./media/part-1.png";
+import part_2 from "./media/part-2.png";
 
 export const Issues = [
   {
@@ -30,6 +32,8 @@ export const Issues = [
         content: "Broken",
       },
     ],
+
+    attachments: [part_1, part_2],
 
     discussions: [
       [

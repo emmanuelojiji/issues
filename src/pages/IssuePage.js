@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Comment from "../components/Comment";
 import NewDiscussion from "../components/NewDiscussion";
 import IssuePagePanel from "../components/IssuePagePanel";
@@ -21,7 +21,7 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
 
   const userId = selectedIssueDiscussions.map((comment) => comment.id);
 
-  console.log(userId);
+  const [issueResolved, setIssueResolved] = useState(false);
 
   return (
     <>
@@ -38,14 +38,30 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
           selectedUser={selectedUser}
           setSelectedUser={setSelectedUser}
           issueId={id}
+          issueResolved={issueResolved}
         />
         <div className="app-right">
           <div className="app-right-header">
             <div className="nav-container">
-              <p className="text-button">Previous Issue</p>
-              <p className="text-button">Next Issue</p>
+              <Link to="/">Back</Link>
+              <div className="nav-container-right">
+                <p className="text-button">Previous Issue</p>
+                <p className="text-button">Next Issue</p>
+              </div>
             </div>
-            <h3>Mark as complete</h3>
+            <div className="mark-as-complete-container">
+              <h3>
+                {issueResolved
+                  ? "This issue has been resolved."
+                  : "Mark as resolved"}
+              </h3>
+              {!issueResolved && (
+                <div
+                  className="mark-as-complete-circle"
+                  onClick={() => setIssueResolved(true)}
+                ></div>
+              )}
+            </div>
           </div>
 
           <div className="report-container main-container container">
@@ -60,7 +76,7 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
               ))}
             </div>
 
-            <div className="additional-info">
+            <div className="additional-info main-container">
               <h3 className="sub-heading">Additional Info</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
@@ -71,7 +87,12 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
               </p>
             </div>
 
-            <div className="attachments sub-heading"></div>
+            <div className="attachments">
+              <h3 className="sub-heading">Attachments</h3>
+              {selectedIssue.attachments.map((image) => (
+                <img src={image} />
+              ))}
+            </div>
           </div>
 
           <div className="discussion-container container">
