@@ -44,8 +44,11 @@ const Dashboard = () => {
           {Notifications.map((notification) => {
             return (
               <>
-                {notification.type === "system" && (
-                  <SystemNotification message={notification.message} />
+                {notification.type != "discussion" && (
+                  <SystemNotification
+                    message={notification.message}
+                    type={notification.type}
+                  />
                 )}
 
                 {notification.type === "discussion" &&

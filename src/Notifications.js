@@ -27,13 +27,13 @@ export const Notifications = [
     ],
   },
   {
-    type: "system",
+    type: "tracking_email_sent",
     message: <p>Tracking Email sent</p>,
     date: "today",
   },
 
   {
-    type: "system",
+    type: "issue_closed",
     message: (
       <p>
         <b>Sontaya</b> marked <b>Wrong Condition</b> as <b></b>Closed
@@ -43,6 +43,7 @@ export const Notifications = [
   },
 
   {
+    type: "issue_resolved",
     message: (
       <p>
         <b>Sontaya</b> marked <b>Wrong Condition</b> as <b>Resolved</b>
@@ -52,6 +53,7 @@ export const Notifications = [
   },
 
   {
+    type: "split_job",
     message: (
       <p>
         This job was split into <b>SG-J24853 - C1</b> and <b>2 buying lines</b>{" "}
