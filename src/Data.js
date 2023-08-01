@@ -43,19 +43,21 @@ export const Issues = [
           id: 1,
           name: "Ali Alnaimi ",
           commentId: 1,
-        },
-        {
-          message:
-            "Customer won't accept that, please contact supplier for an exchange @sontaya.petch.ang",
-          id: 4,
-          name: "Clement Ng",
-          commentId: 2,
-        },
-        {
-          message: "@rocio.perez @kelvin.rhodes FYI",
-          id: 5,
-          name: "Patrick Weber",
-          commentId: 3,
+          replies: [
+            {
+              message:
+                "Customer won't accept that, please contact supplier for an exchange @sontaya.petch.ang",
+              id: 4,
+              name: "Clement Ng",
+              commentId: 2,
+            },
+            {
+              message: "@rocio.perez @kelvin.rhodes FYI",
+              id: 5,
+              name: "Patrick Weber",
+              commentId: 3,
+            },
+          ],
         },
       ],
       [
@@ -63,8 +65,14 @@ export const Issues = [
           message: "Can someone pick this up next week, I’ll be on holiday.",
           id: 3,
           name: "Rocio",
+          replies: [
+            {
+              message: "No worries, I’ll get it sorted.",
+              id: 4,
+              name: "Clement",
+            },
+          ],
         },
-        { message: "No worries, I’ll get it sorted.", id: 4, name: "Clement" },
       ],
     ],
   },

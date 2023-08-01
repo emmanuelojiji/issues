@@ -10,6 +10,7 @@ import "./Dashboard.scss";
 import SystemNotification from "../components/Notification";
 import { Notifications } from "../Notifications";
 import ToDoList from "../components/ToDoList";
+import DiscussionNotification from "../components/DiscussionNotification";
 
 const Dashboard = () => {
   return (
@@ -32,7 +33,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <ToDoList/>
+        <ToDoList />
 
         <div className="notification-container container">
           <div className="discussion-header">
@@ -40,7 +41,10 @@ const Dashboard = () => {
           </div>
 
           {Notifications.map((notification) => (
-            <SystemNotification message={notification.message} />
+            <>
+              <SystemNotification message={notification.message} />
+              <DiscussionNotification />
+            </>
           ))}
         </div>
       </div>

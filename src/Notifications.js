@@ -33,8 +33,5 @@ export const Notifications = [
     date: "May 18 2023",
   },
 
-  {
-    message: "hey",
-    date: "May 1 2023",
-  },
+  
 ];
