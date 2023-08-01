@@ -39,7 +39,7 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
       setTimeout(() => {
         targetComment.scrollIntoView({
           behaviour: "smooth",
-          top: window. - 500,
+          
         });
       }, 200);
     }

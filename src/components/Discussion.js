@@ -9,6 +9,7 @@ const Discussion = ({
   setUserModalVisible,
   setSelectedUser,
   selectedUser,
+  commentId,
 }) => {
   const [replyToVisivle, setReplyToVisible] = useState(false);
 
@@ -37,6 +38,7 @@ const Discussion = ({
                 setReplyToName(comment.name);
                 setReplyToMessage(comment.message);
               }}
+              commentId={comment.id}
             />
 
             {comment.replies &&

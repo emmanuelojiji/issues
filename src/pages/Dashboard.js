@@ -67,6 +67,8 @@ const Dashboard = () => {
                         replyMessage={discussion.replies[0].message}
                         originalUserAvatarImage={originalUser.avatar}
                         replyAvatarImage={replyUser.avatar}
+                        issueId={discussion.issueId}
+                        commentId={discussion.commentId}
                       />
                     );
                   })}

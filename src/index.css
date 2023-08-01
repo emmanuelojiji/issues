@@ -9,8 +9,15 @@
 html,
 body {
   height: 100%;
+
 }
 
+html{
+  scroll-behavior: smooth;
+}
+body{
+  scroll-behavior: smooth;
+}
 .heading {
   margin-bottom: 30px;
 }

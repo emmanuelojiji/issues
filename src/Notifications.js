@@ -1,6 +1,7 @@
 export const Notifications = [
   {
     type: "discussion",
+    date: new Date(),
     discussions: [
       {
         message:
@@ -8,6 +9,7 @@ export const Notifications = [
         id: 1,
         name: "Ali Alnaimi ",
         commentId: 1,
+        issueId: "wrong_condition",
         replies: [
           {
             message:
@@ -29,7 +31,7 @@ export const Notifications = [
   {
     type: "tracking_email_sent",
     message: <p>Tracking Email sent</p>,
-    date: "today",
+    date: new Date(),
   },
 
   {

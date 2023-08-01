@@ -11,10 +11,10 @@ const Comment = ({
   setSelectedUser,
   userId,
   replyOnClick,
-
+  commentId,
 }) => {
   return (
-    <div className="comment-container">
+    <div className="comment-container" id={commentId}>
       <Avatar
         size="30px"
         avatarImage={avatarImage}
