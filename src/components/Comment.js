@@ -10,6 +10,8 @@ const Comment = ({
   setUserModalVisible,
   setSelectedUser,
   userId,
+  replyOnClick,
+
 }) => {
   return (
     <div className="comment-container">
@@ -25,7 +27,7 @@ const Comment = ({
         <h4>{name}</h4>
         <p>{message}</p>
         <div className="reply-container">
-          <h5>Reply</h5>
+          <h5 onClick={replyOnClick}>Reply</h5>
           <Reaction />
         </div>
       </div>

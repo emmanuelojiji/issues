@@ -42,17 +42,20 @@ export const Issues = [
             "Hello, we have received this part from pos B-01 without a cover. Please check the pictures attached in the report.",
           id: 1,
           name: "Ali Alnaimi ",
+          commentId: 1
         },
         {
           message:
             "Customer won't accept that, please contact supplier for an exchange @sontaya.petch.ang",
           id: 4,
           name: "Clement Ng",
+          commentId:2
         },
         {
           message: "@rocio.perez @kelvin.rhodes FYI",
           id: 5,
           name: "Patrick Weber",
+          commentId: 3
         },
       ],
       [
