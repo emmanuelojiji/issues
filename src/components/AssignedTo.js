@@ -1,5 +1,5 @@
 import React from "react";
-import { Issues } from "../Issues";
+import { Issues } from "../Data";
 import "./AssignedTo.scss";
 import Avatar from "./Avatar";
 import { Users } from "../Users";

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Issues } from "../Issues";
+import { Issues } from "../Data";
 import { Users } from "../Users";
 import Avatar from "./Avatar";
 import "./IssueCard.scss";

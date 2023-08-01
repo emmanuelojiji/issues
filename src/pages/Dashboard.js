@@ -4,11 +4,12 @@ import Comment from "../components/Comment";
 import IssueCard from "../components/IssueCard";
 import DashboardPanel from "../components/DashboardPanel";
 import ToDoItem from "../components/ToDoItem";
-import { Issues } from "../Issues";
+import { Issues, ToDos } from "../Data";
 import "./IssuePage.scss";
 import "./Dashboard.scss";
 import SystemNotification from "../components/Notification";
 import { Notifications } from "../Notifications";
+import ToDoList from "../components/ToDoList";
 
 const Dashboard = () => {
   return (
@@ -31,15 +32,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="to-do-container container">
-          <div className="to-do-header">
-            <h3 className="heading">To do list</h3>
-            <button>Create to do</button>
-          </div>
-          <ToDoItem text="Contact supplier for exchange for B-01 part" />
-          <ToDoItem text="Chase reply from Save-Tech" />
-          <ToDoItem text="To do item" />
-        </div>
+        <ToDoList/>
 
         <div className="notification-container container">
           <div className="discussion-header">

@@ -1,5 +1,5 @@
 import React from "react";
-import { Issues } from "../Issues";
+import { Issues } from "../Data";
 import "./IssueInfo.scss";
 
 const IssueInfo = ({ issueId, issueResolved }) => {

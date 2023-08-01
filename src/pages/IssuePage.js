@@ -5,7 +5,7 @@ import NewDiscussion from "../components/NewDiscussion";
 import IssuePagePanel from "../components/IssuePagePanel";
 import "./IssuePage.scss";
 import UserModal from "../components/UserModal";
-import { Issues } from "../Issues";
+import { Issues } from "../Data";
 import { Users } from "../Users";
 import ReplyTo from "../components/ReplyTo";
 import Discussion from "../components/Discussion";
