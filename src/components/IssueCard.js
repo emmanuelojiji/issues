@@ -7,11 +7,10 @@ import "./IssueCard.scss";
 
 const IssueCard = ({ title, id, status }) => {
   const targetIssue = Issues.find((issue) => issue.id === id);
-
-  const assignedUserAvatars = targetIssue.assignees.map((assignee) => {
-    const user = Users.find((user) => user.id === assignee.id);
-    return user ? user.avatar : null;
-  });
+  const assignedUserIds = targetIssue.assignees.map((assignee) => assignee.id);
+  const assignedUsers = Users.filter((user) =>
+    assignedUserIds.includes(user.id)
+  );
 
   return (
     <Link to={`/issue/${id}`} className="issue-card">
@@ -21,11 +20,11 @@ const IssueCard = ({ title, id, status }) => {
         </div>
         <h3>{title}</h3>
         <div className="issue-card-footer">
-          {assignedUserAvatars.map((avatar, index) => (
+          {assignedUsers.map((user, index) => (
             <Avatar
               key={index}
-              avatarImage={avatar}
-              // You can add more Avatar props here as needed
+              avatarImage={user.avatar}
+              opacity={user.dates && "0.2"}
             />
           ))}
         </div>
