@@ -1,10 +1,39 @@
 export const Notifications = [
   {
+    type: "discussion",
+    discussions: [
+      {
+        message:
+          "Hello, we have received this part from pos B-01 without a cover. Please check the pictures attached in the report.",
+        id: 1,
+        name: "Ali Alnaimi ",
+        commentId: 1,
+        replies: [
+          {
+            message:
+              "Customer won't accept that, please contact supplier for an exchange @sontaya.petch.ang",
+            id: 4,
+            name: "Clement Ng",
+            commentId: 2,
+          },
+          {
+            message: "@rocio.perez @kelvin.rhodes FYI",
+            id: 5,
+            name: "Patrick Weber",
+            commentId: 3,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    type: "system",
     message: <p>Tracking Email sent</p>,
     date: "today",
   },
 
   {
+    type: "system",
     message: (
       <p>
         <b>Sontaya</b> marked <b>Wrong Condition</b> as <b></b>Closed
@@ -32,6 +61,4 @@ export const Notifications = [
     ),
     date: "May 18 2023",
   },
-
-  
 ];

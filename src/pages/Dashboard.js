@@ -42,8 +42,19 @@ const Dashboard = () => {
 
           {Notifications.map((notification) => (
             <>
-              <SystemNotification message={notification.message} />
-              <DiscussionNotification />
+              {notification.type === "system" && (
+                <SystemNotification message={notification.message} />
+              )}
+
+              {notification.type === "discussion" &&
+                notification.discussions.map((discussion) => (
+                  <DiscussionNotification
+                    message={discussion.message}
+                    name={discussion.name}
+                    replyName={discussion.replies[0].name}
+                    replyMessage={discussion.replies[0].message}
+                  />
+                ))}
             </>
           ))}
         </div>

@@ -52,6 +52,11 @@ const Discussion = ({
                     message={reply.message}
                     avatarImage={userReply.avatar}
                     userId={userReply.id}
+                    replyOnClick={() => {
+                      setReplyToVisible(true);
+                      setReplyToName(reply.name);
+                      setReplyToMessage(reply.message);
+                    }}
                   />
                 );
               })}

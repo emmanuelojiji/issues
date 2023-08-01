@@ -1,0 +1,14 @@
+.discussion-notification-original {
+  background: #161e28;
+  padding: 45px;
+  border: dashed 1px #007ad4;
+  border-radius: 10px;
+
+  .comment-container {
+    margin-bottom: 0;
+  }
+}
+
+.discussion-notification-reply {
+  margin-left: calc(45px + 45px);
+}
