@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Comment from "../components/Comment";
 import NewDiscussion from "../components/NewDiscussion";
@@ -24,6 +24,26 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
   const userId = selectedIssueDiscussions.map((comment) => comment.id);
 
   const [issueResolved, setIssueResolved] = useState(false);
+
+  useEffect(() => {
+    const currentUrl = window.location.href;
+
+    const splitUrl = currentUrl.split("#");
+    console.log(splitUrl);
+    const commentId = splitUrl.pop();
+    console.log(commentId);
+
+    const targetComment = document.getElementById(commentId);
+
+    if (targetComment) {
+      setTimeout(() => {
+        targetComment.scrollIntoView({
+          behaviour: "smooth",
+          top: window. - 500,
+        });
+      }, 200);
+    }
+  });
 
   return (
     <>
