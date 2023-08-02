@@ -10,7 +10,8 @@ const Avatar = ({
   userId,
 }) => {
   return (
-    <div
+    <img
+      src={avatarImage}
       className="avatar"
       onClick={() => {
         setUserModalVisible(true);
@@ -19,10 +20,9 @@ const Avatar = ({
       style={{
         width: size,
         height: size,
-        background: `url(${avatarImage}`,
         opacity: opacity,
       }}
-    ></div>
+    ></img>
   );
 };
 

@@ -73,7 +73,7 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
             <div className="mark-as-complete-container">
               <h3>
                 {issueResolved
-                  ? "This issue has been resolved."
+                  ? "This issue has been resolved"
                   : "Mark as resolved"}
               </h3>
               {!issueResolved && (
@@ -91,8 +91,8 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
             <div className="part-container">
               {selectedIssue.fields.map((field, fieldIndex) => (
                 <div key={fieldIndex} className="row">
-                  <h2>{field.heading}</h2>
-                  <p>{field.content}</p>
+                  <h3>{field.heading}</h3>
+                  <p style={{color: issueResolved ? "#60a350" : "#E3144B"}}>{field.content}</p>
                 </div>
               ))}
             </div>

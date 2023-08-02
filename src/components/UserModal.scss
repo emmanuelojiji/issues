@@ -12,7 +12,7 @@
 }
 
 .user-modal {
-  height: 500px;
+  min-height: 500px;
   width: 400px;
   background: #111821;
   display: flex;
@@ -21,4 +21,9 @@
   justify-content: center;
   border-radius: 15px;
   color: white;
+  padding: 0 20px;
+}
+
+.date-card-container{
+  width: 100%;
 }

@@ -12,7 +12,7 @@ const DateCard = ({
   return (
     <div className="date-card">
       <div>
-        <h3>Out of office</h3>
+        <p>Out of office</p>
         <p>{dateRange}</p>
       </div>
       <Avatar
@@ -20,6 +20,7 @@ const DateCard = ({
         setUserModalVisible={setUserModalVisible}
         setSelectedUser={setSelectedUser}
         userId={userId}
+        size="30px"
       />
     </div>
   );
