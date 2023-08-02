@@ -8,6 +8,7 @@ const Avatar = ({
   setUserModalVisible,
   setSelectedUser,
   userId,
+  avatarDisplay
 }) => {
   return (
     <img
@@ -21,6 +22,7 @@ const Avatar = ({
         width: size,
         height: size,
         opacity: opacity,
+        display: avatarDisplay,
       }}
     ></img>
   );

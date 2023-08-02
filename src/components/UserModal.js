@@ -22,14 +22,16 @@ const UserModal = ({ selectedUser, setUserModalVisible, avatarImage }) => {
           <div className="calendar-header-left">
             <h3>Calendar</h3> <p className="month">AUG</p>
           </div>
-          <p className="time-zone">12:30EST</p>
+          <p className="time-zone">12:30 EST</p>
         </div>
 
         <div className="date-card-container">
           {user.dates &&
-            user.dates.map((date) => <DateCard dateRange={date} />)}
+            user.dates.map((date) => (
+              <DateCard dateRange={date} avatarDisplay="none" />
+            ))}
 
-          {!user.dates && <p className="no-dates">No dates to show</p>}
+          {!user.dates && <p className="no-dates">No upcoming dates</p>}
         </div>
       </div>
     </div>
