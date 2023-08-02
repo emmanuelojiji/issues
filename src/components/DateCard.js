@@ -12,9 +12,12 @@ const DateCard = ({
 }) => {
   return (
     <div className="date-card">
-      <div>
-        <p>Out of office</p>
-        <p className="date-range">{dateRange}</p>
+      <div className="date-card-left">
+        <div className="blue-circle"></div>
+        <div>
+          <h5>Out of office</h5>
+          <p className="date-range">{dateRange}</p>
+        </div>
       </div>
       <Avatar
         setSelectedUser={setSelectedUser}

@@ -12,11 +12,24 @@
   margin-bottom: 30px;
   color: #007ad4;
 
-  &:last-child{
+  &:last-child {
     margin: 0;
   }
 
-  .date-range{
+  .date-range {
     margin-top: 5px;
   }
+}
+
+.blue-circle {
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  background: #007ad4;
+}
+
+.date-card-left{
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
