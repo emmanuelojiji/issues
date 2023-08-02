@@ -37,19 +37,20 @@
   margin-bottom: 10px;
   color: #007AD4;
  }
-}
-
-.date-card-container{
-  width: 100%;
-}
-
-.calendar-header{
+ .calendar-header{
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
 }
+}
+
+.date-card-container{
+  width: 100%;
+}
+
+
 
 .calendar-header-left{
   display: flex;

@@ -7,14 +7,26 @@
   .right {
     margin-left: 20px;
   }
+
+  p{
+    color: #687D94;
+    margin-top: 10px;
+  }
 }
 
 .reply-container {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 10px;
 }
 
-.comments-container{
-  
+.reply{
+  color: #007AD4;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover{
+    opacity: 0.5;
+  }
 }

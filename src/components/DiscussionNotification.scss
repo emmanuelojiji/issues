@@ -1,3 +1,10 @@
+.discussion-notification{
+  transition: 0.2s ease-in-out;
+  &:hover{
+    opacity: 0.5;
+  }
+}
+
 .discussion-notification-original {
   background: #161e28;
   padding: 45px;
@@ -5,9 +12,19 @@
   border-radius: 10px;
   margin-bottom: 20px;
   color: white;
+  position: relative;
+
 
   .comment-container {
     margin-bottom: 0;
+  }
+
+  .icon{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 50px;
+    z-index: 30;
   }
 }
 

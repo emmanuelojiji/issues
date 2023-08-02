@@ -12,6 +12,7 @@ const Comment = ({
   userId,
   replyOnClick,
   commentId,
+  replyContainerDisplay
 }) => {
   return (
     <div className="comment-container" id={commentId}>
@@ -26,8 +27,8 @@ const Comment = ({
       <div className="right">
         <h4>{name}</h4>
         <p>{message}</p>
-        <div className="reply-container">
-          <h5 onClick={replyOnClick}>Reply</h5>
+        <div className="reply-container" style={{display: replyContainerDisplay}}>
+          <h5 className="reply" onClick={replyOnClick}>Reply</h5>
           <Reaction />
         </div>
       </div>

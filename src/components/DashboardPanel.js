@@ -22,9 +22,9 @@ const DashboardPanel = ({
   return (
     <aside className="panel">
       <h2>Issues Board</h2>
-      <h4 className="text-button">Hide Filters</h4>
+      <h3 className="text-button">Hide Filters</h3>
 
-      <h2>By category</h2>
+      <h3>By category</h3>
       <div className="filters-container">
         <FilterPill
           text="Wrong Condition"
@@ -58,7 +58,7 @@ const DashboardPanel = ({
         />
       </div>
 
-      <h2>By status</h2>
+      <h3>By status</h3>
       <div className="filters-container">
         <FilterPill text="Outstanding" />
         <FilterPill text="Resolved" />
