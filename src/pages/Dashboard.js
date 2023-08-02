@@ -18,13 +18,12 @@ const Dashboard = () => {
 
   const [filteredIssues, setFilteredIssues] = useState([]);
 
-  const [issues, setIssues] = useState([]);
+  const filteredIssueObjects = filteredIssues.map((id) =>
+    Issues.find((issue) => issue.id === id)
+  );
 
-  const filteredIssueObjects = filteredIssues.map((id) => Issues.find((issue) => issue.id === id));
-
-  const issuesToDisplay = filteredIssues.length > 0 ? filteredIssueObjects : Issues;
-
-
+  const issuesToDisplay =
+    filteredIssues.length > 0 ? filteredIssueObjects : Issues;
 
   return (
     <main className="row-container">
