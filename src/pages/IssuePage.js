@@ -25,6 +25,14 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
 
   const [issueResolved, setIssueResolved] = useState(false);
 
+  const [imagePreviewVisible, setImagePreviewVisible] = useState(false);
+  const [imageId, setImageId] = useState();
+  const chosenImage = selectedIssue.attachments.find(
+    (image) => image.id === imageId
+  );
+
+  const [cursorPosition, setCursorPosition] = useState({ x: 0 });
+
   useEffect(() => {
     const currentUrl = window.location.href;
 
@@ -64,7 +72,9 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
         <div className="app-right">
           <div className="issue-page-header">
             <div className="nav-container">
-              <Link to="/" className="text-button">Back</Link>
+              <Link to="/" className="text-button">
+                Back
+              </Link>
               <div className="nav-container-right">
                 <p className="text-button">Previous Issue</p>
                 <p className="text-button">Next Issue</p>
@@ -92,7 +102,9 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
               {selectedIssue.fields.map((field, fieldIndex) => (
                 <div key={fieldIndex} className="row">
                   <h3>{field.heading}</h3>
-                  <p style={{color: issueResolved ? "#60a350" : "#E3144B"}}>{field.content}</p>
+                  <p style={{ color: issueResolved ? "#60a350" : "#E3144B" }}>
+                    {field.content}
+                  </p>
                 </div>
               ))}
             </div>
@@ -109,9 +121,19 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
             </div>
 
             <div className="attachments">
+              
               <h3 className="sub-heading">Attachments</h3>
               {selectedIssue.attachments.map((image) => (
-                <img src={image} />
+                <img
+                  src={image.src}
+                  onMouseOver={() => {
+                    setImagePreviewVisible(true);
+                    setImageId(image.id);
+                  }}
+                  style={{
+                    left: cursorPosition.x,
+                  }}
+                />
               ))}
             </div>
           </div>

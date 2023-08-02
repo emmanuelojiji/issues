@@ -1,24 +1,27 @@
+.to-do-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-.to-do-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.new-to-do {
+  height: 85px;
+  border: dashed 1px #007ad4;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding-left: 35px;
+
+}
+
+.new-to-do-input {
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: 0;
+  outline: none;
+  color: white;
+
+  &::placeholder{
+    color: #007ad4;
   }
-
-  .new-to-do{
-    height: 85px;
-    border: dashed 1px #007ad4;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    padding-left: 20px;
-  }
-
-  .new-to-do-input{
-    height: 100%;
-    width: 100%;
-    background: none;
-    border: 0;
-    outline: none;
-    color: white;
-
-  }
+}

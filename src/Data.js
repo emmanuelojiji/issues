@@ -33,7 +33,14 @@ export const Issues = [
       },
     ],
 
-    attachments: [part_1, part_2],
+    attachments: [
+      {
+        id: 1,
+        src: part_1,
+      },
+
+      { id: 2, src: part_2 },
+    ],
 
     discussions: [
       [
