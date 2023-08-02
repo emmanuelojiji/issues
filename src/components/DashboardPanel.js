@@ -37,21 +37,27 @@ const DashboardPanel = ({
         />
         <FilterPill
           text="Damaged Parts"
-          onMouseOver={() => filteredIssues.length === 0 && setHoveredFilter("damaged_parts")}
+          onMouseOver={() =>
+            filteredIssues.length === 0 && setHoveredFilter("damaged_parts")
+          }
           onMouseLeave={() => setHoveredFilter()}
           onClick={() => handleFilter("damaged_parts")}
           state={filteredIssues.includes("damaged_parts") && "active"}
         />
         <FilterPill
           text="Missing parts"
-          onMouseOver={() => filteredIssues.length === 0 && setHoveredFilter("missing_parts")}
+          onMouseOver={() =>
+            filteredIssues.length === 0 && setHoveredFilter("missing_parts")
+          }
           onMouseLeave={() => setHoveredFilter()}
           onClick={() => handleFilter("missing_parts")}
           state={filteredIssues.includes("missing_parts") && "active"}
         />
         <FilterPill
           text="Extra parts"
-          onMouseOver={() => filteredIssues.length === 0 && setHoveredFilter("extra_parts")}
+          onMouseOver={() =>
+            filteredIssues.length === 0 && setHoveredFilter("extra_parts")
+          }
           onMouseLeave={() => setHoveredFilter()}
           onClick={() => handleFilter("extra_parts")}
           state={filteredIssues.includes("extra_parts") && "active"}

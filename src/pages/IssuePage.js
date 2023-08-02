@@ -21,13 +21,13 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
 
   const selectedIssueDiscussions = selectedIssue.discussions;
 
-  const userId = selectedIssueDiscussions.map((comment) => comment.id);
+  const userId = selectedIssueDiscussions?.map((comment) => comment.id);
 
   const [issueResolved, setIssueResolved] = useState(false);
 
   const [imagePreviewVisible, setImagePreviewVisible] = useState(false);
   const [imageId, setImageId] = useState();
-  const chosenImage = selectedIssue.attachments.find(
+  const chosenImage = selectedIssue.attachments?.find(
     (image) => image.id === imageId
   );
 
@@ -99,7 +99,7 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
             <h3 className="heading">Report</h3>
 
             <div className="part-container">
-              {selectedIssue.fields.map((field, fieldIndex) => (
+              {selectedIssue.fields?.map((field, fieldIndex) => (
                 <div key={fieldIndex} className="row">
                   <h3>{field.heading}</h3>
                   <p style={{ color: issueResolved ? "#60a350" : "#E3144B" }}>
@@ -123,7 +123,7 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
             <div className="attachments">
               
               <h3 className="sub-heading">Attachments</h3>
-              {selectedIssue.attachments.map((image) => (
+              {selectedIssue.attachments?.map((image) => (
                 <img
                   src={image.src}
                   onMouseOver={() => {
@@ -148,7 +148,7 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
 
             {newDiscussionVisible && <NewDiscussion />}
 
-            {selectedIssue.discussions.map((discussion) => (
+            {selectedIssue.discussions?.map((discussion) => (
               <Discussion
                 discussion={discussion}
                 setUserModalVisible={setUserModalVisible}
