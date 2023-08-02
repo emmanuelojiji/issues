@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Comment from "../components/Comment";
 import IssueCard from "../components/IssueCard";
@@ -15,9 +15,24 @@ import { Users } from "../Users";
 
 const Dashboard = () => {
   const [hoveredFilter, setHoveredFilter] = useState("");
+
+  const [filteredIssues, setFilteredIssues] = useState([]);
+
+  const [issues, setIssues] = useState([]);
+
+  const filteredIssueObjects = filteredIssues.map((id) => Issues.find((issue) => issue.id === id));
+
+  const issuesToDisplay = filteredIssues.length > 0 ? filteredIssueObjects : Issues;
+
+
+
   return (
     <main className="row-container">
-      <DashboardPanel setHoveredFilter={setHoveredFilter} />
+      <DashboardPanel
+        setHoveredFilter={setHoveredFilter}
+        setFilteredIssues={setFilteredIssues}
+        filteredIssues={filteredIssues}
+      />
       <div className="app-right">
         <div className="issues-card-container container">
           <div className="dashboard-header">
@@ -25,7 +40,7 @@ const Dashboard = () => {
             <button>Create new Issue</button>
           </div>
           <div className="card-container">
-            {Issues.map((issue) => (
+            {issuesToDisplay.map((issue) => (
               <IssueCard
                 id={issue.id}
                 title={issue.title}

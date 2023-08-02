@@ -7,7 +7,7 @@ import "./IssueCard.scss";
 
 const IssueCard = ({ title, id, status, color, opacity }) => {
   const targetIssue = Issues.find((issue) => issue.id === id);
-  const assignedUserIds = targetIssue.assignees.map((assignee) => assignee.id);
+  const assignedUserIds = targetIssue ? targetIssue.assignees.map((assignee) => assignee.id) : [];
   const assignedUsers = Users.filter((user) =>
     assignedUserIds.includes(user.id)
   );
