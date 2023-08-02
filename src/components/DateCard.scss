@@ -11,4 +11,8 @@
   padding-right: 20px;
   margin-bottom: 30px;
   color: #007ad4;
+
+  &:last-child{
+    margin: 0;
+  }
 }

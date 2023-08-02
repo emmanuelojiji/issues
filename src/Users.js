@@ -17,8 +17,9 @@ export const Users = [
   {
     id: 4,
     name: "Clement ng",
+    role: "Order Fulfilment Manager",
     avatar: clement,
-    dates: ["20 - 21 Aug", "1-3 Sep"],
+    dates: ["20 - 21", "1-3"],
   },
   { id: 5, name: "Patrick Weber", avatar: patrick, dates: ["20th - 30th"] },
   { id: 6, name: "Rob", avatar: rob },

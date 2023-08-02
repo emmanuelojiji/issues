@@ -98,8 +98,8 @@ export const Issues = [
     ],
   },
   {
-    title: "Damaged Parts",
-    id: "damaged_parts",
+    title: "Missing Parts",
+    id: "missing_parts",
     status: "unresolved",
     assignees: [{ id: 1 }, { id: 2 }],
     fields: [
@@ -118,28 +118,8 @@ export const Issues = [
     ],
   },
   {
-    title: "Damaged Parts",
-    id: "damaged_parts",
-    status: "resolved",
-    assignees: [{ id: 1 }, { id: 2 }],
-    fields: [
-      {
-        heading: "Damaged Line",
-        content: "1FT5044-1AF71-3EB0",
-      },
-      {
-        heading: "Carrier",
-        content: "UPS",
-      },
-      {
-        heading: "Quantity",
-        content: "3",
-      },
-    ],
-  },
-  {
-    title: "Damaged Parts",
-    id: "damaged_parts",
+    title: "Extra Parts",
+    id: "extra_parts",
     status: "resolved",
     assignees: [{ id: 1 }, { id: 2 }],
     fields: [

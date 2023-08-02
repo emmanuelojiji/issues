@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Comment from "../components/Comment";
 import IssueCard from "../components/IssueCard";
@@ -14,9 +14,10 @@ import DiscussionNotification from "../components/DiscussionNotification";
 import { Users } from "../Users";
 
 const Dashboard = () => {
+  const [hoveredFilter, setHoveredFilter] = useState("");
   return (
     <main className="row-container">
-      <DashboardPanel />
+      <DashboardPanel setHoveredFilter={setHoveredFilter} />
       <div className="app-right">
         <div className="issues-card-container container">
           <div className="dashboard-header">
@@ -29,6 +30,14 @@ const Dashboard = () => {
                 id={issue.id}
                 title={issue.title}
                 status={issue.status}
+                color={
+                  issue.status === "unresolved"
+                    ? "#c54b4b"
+                    : issue.status === "resolved"
+                    ? "#60a350"
+                    : "#808080"
+                }
+                opacity={hoveredFilter && issue.id != hoveredFilter && "0.5"}
               />
             ))}
           </div>

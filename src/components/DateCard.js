@@ -15,13 +15,8 @@ const DateCard = ({
         <p>Out of office</p>
         <p>{dateRange}</p>
       </div>
-      <Avatar
-        avatarImage={avatarImage}
-        setUserModalVisible={setUserModalVisible}
-        setSelectedUser={setSelectedUser}
-        userId={userId}
-        size="30px"
-      />
+      
+      
     </div>
   );
 };

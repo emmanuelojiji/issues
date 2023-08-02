@@ -1,10 +1,16 @@
 import React from "react";
 import "./FilterPill.scss";
 
-const FilterPill = ({text}) => {
-  return <div className="filter-pill">
-    {text}
-  </div>;
+const FilterPill = ({ text, onMouseOver, onMouseLeave }) => {
+  return (
+    <div
+      className="filter-pill"
+      onMouseOver={onMouseOver}
+      onMouseLeave={onMouseLeave}
+    >
+      {text}
+    </div>
+  );
 };
 
 export default FilterPill;
