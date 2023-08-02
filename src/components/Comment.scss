@@ -1,6 +1,11 @@
 .comment-container {
   display: flex;
   margin-bottom: 50px;
+ 
+
+  &:last-child{
+    margin-bottom: 0;
+  }
 
   
   height: fit-content;

@@ -34,6 +34,7 @@ const AssignedTo = ({ setUserModalVisible, setSelectedUser }) => {
               setSelectedUser={setSelectedUser}
               userId={user?.id}
               opacity={!assignee.available ? "0.3" : undefined}
+              size="30px"
             />
           );
         })}

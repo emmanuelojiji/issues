@@ -17,7 +17,7 @@ const Discussion = ({
   const [replyToMessage, setReplyToMessage] = useState();
 
   return (
-    <div className="comments-container main-container container">
+    <div className="comments-container main-container ">
       {discussion.map((comment) => {
         const user = Users.find((u) => u.id === comment.id);
 

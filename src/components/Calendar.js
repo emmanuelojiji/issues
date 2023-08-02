@@ -11,7 +11,7 @@ const Calendar = ({ issueId, setUserModalVisible, setSelectedUser }) => {
     <div className="calendar">
       <div className="calendar-header">
         <h3>Calendar</h3>
-        <p>This week</p>
+        <p className="this-week">This week</p>
       </div>
       {Users.map((user) => {
         if (user.dates && user.dates.length > 0) {
