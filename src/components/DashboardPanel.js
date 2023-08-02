@@ -28,28 +28,30 @@ const DashboardPanel = ({
       <div className="filters-container">
         <FilterPill
           text="Wrong Condition"
-          onMouseOver={() => setHoveredFilter("wrong_condition")}
+          onMouseOver={() =>
+            filteredIssues.length === 0 && setHoveredFilter("wrong_condition")
+          }
           onMouseLeave={() => setHoveredFilter()}
           onClick={() => handleFilter("wrong_condition")}
           state={filteredIssues.includes("wrong_condition") && "active"}
         />
         <FilterPill
           text="Damaged Parts"
-          onMouseOver={() => setHoveredFilter("damaged_parts")}
+          onMouseOver={() => filteredIssues.length === 0 && setHoveredFilter("damaged_parts")}
           onMouseLeave={() => setHoveredFilter()}
           onClick={() => handleFilter("damaged_parts")}
           state={filteredIssues.includes("damaged_parts") && "active"}
         />
         <FilterPill
           text="Missing parts"
-          onMouseOver={() => setHoveredFilter("missing_parts")}
+          onMouseOver={() => filteredIssues.length === 0 && setHoveredFilter("missing_parts")}
           onMouseLeave={() => setHoveredFilter()}
           onClick={() => handleFilter("missing_parts")}
           state={filteredIssues.includes("missing_parts") && "active"}
         />
         <FilterPill
           text="Extra parts"
-          onMouseOver={() => setHoveredFilter("extra_parts")}
+          onMouseOver={() => filteredIssues.length === 0 && setHoveredFilter("extra_parts")}
           onMouseLeave={() => setHoveredFilter()}
           onClick={() => handleFilter("extra_parts")}
           state={filteredIssues.includes("extra_parts") && "active"}
