@@ -39,9 +39,8 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
       setTimeout(() => {
         targetComment.scrollIntoView({
           behaviour: "smooth",
-          
         });
-      }, 200);
+      }, 100);
     }
   });
 
@@ -63,9 +62,9 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
           issueResolved={issueResolved}
         />
         <div className="app-right">
-          <div className="app-right-header">
+          <div className="issue-page-header">
             <div className="nav-container">
-              <Link to="/">Back</Link>
+              <Link to="/" className="text-button">Back</Link>
               <div className="nav-container-right">
                 <p className="text-button">Previous Issue</p>
                 <p className="text-button">Next Issue</p>
