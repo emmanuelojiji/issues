@@ -86,7 +86,7 @@ export const Issues = [
 
   {
     title: "Damaged Parts",
-    id: "damaged_parts",
+    id: "wrong_condition",
     status: "closed",
     assignees: [{ id: 1 }, { id: 2 }],
     fields: [
@@ -106,7 +106,7 @@ export const Issues = [
   },
   {
     title: "Missing Parts",
-    id: "missing_parts",
+    id: "wrong_condition",
     status: "unresolved",
     assignees: [{ id: 1 }, { id: 2 }],
     fields: [
@@ -126,7 +126,7 @@ export const Issues = [
   },
   {
     title: "Extra Parts",
-    id: "extra_parts",
+    id: "wrong_condition",
     status: "resolved",
     assignees: [{ id: 1 }, { id: 2 }],
     fields: [
