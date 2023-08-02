@@ -50,7 +50,7 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
         });
       }, 100);
     }
-  });
+  },[]);
 
   return (
     <>
