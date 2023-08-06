@@ -3,16 +3,41 @@
 }
 
 .side-report {
-    max-height: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: max-height 0.3s ease-in-out, visibility 0s linear 0.3s, opacity 0.3s ease-in-out;
+  max-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, visibility 0s linear 0.3s,
+    opacity 0.3s ease-in-out;
+
+  p {
+    display: block;
+    transition: 0.3s ease-in-out;
   }
-  
-  .expanded {
-    max-height: 1000px; /* Adjust this value to accommodate your content */
-    visibility: visible;
-    opacity: 1;
-    transition: max-height 0.3s ease-in-out, visibility 0s linear, opacity 0.3s ease-in-out;
-  }
-  
+}
+
+
+
+.expanded {
+  max-height: 1000px; /* Adjust this value to accommodate your content */
+  visibility: visible;
+  opacity: 1;
+  transition: max-height 0.3s ease-in-out, visibility 0s linear,
+    opacity 0.3s ease-in-out;
+}
+
+.see-more {
+  color: red;
+  margin-top: 20px;
+  display: block;
+}
+
+
+.text-container{
+    max-height: 50px;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+
+    &.text-expanded{
+        max-height: 100px;
+    }
+}
