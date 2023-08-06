@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Comment from "../components/Comment";
 import NewDiscussion from "../components/NewDiscussion";
@@ -50,7 +50,20 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
         });
       }, 100);
     }
-  },[]);
+  }, []);
+
+  const handleScroll = () => {
+    console.log(app_right_ref.current.scrollTop);
+    if (app_right_ref.current.scrollTop > 693) {
+      setShowReportInSidebar(true)
+    } else {
+      setShowReportInSidebar(false)
+    }
+  };
+
+  const app_right_ref = useRef();
+
+  const [showReportInSidebar, setShowReportInSidebar] = useState(false);
 
   return (
     <>
@@ -68,8 +81,13 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
           setSelectedUser={setSelectedUser}
           issueId={id}
           issueResolved={issueResolved}
+          showReportInSidebar={showReportInSidebar}
         />
-        <div className="app-right">
+        <div
+          className="app-right"
+          ref={app_right_ref}
+          onScroll={() => handleScroll()}
+        >
           <div className="issue-page-header">
             <div className="nav-container">
               <Link to="/" className="text-button">
@@ -121,7 +139,6 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
             </div>
 
             <div className="attachments">
-              
               <h3 className="sub-heading">Attachments</h3>
               {selectedIssue.attachments?.map((image) => (
                 <img
