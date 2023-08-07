@@ -7,7 +7,12 @@ import rob from "./media/rob.svg";
 
 export const Users = [
   { id: 1, name: "Ali Alnaimi", avatar: ali, role: "Warehouse Operative" },
-  { id: 2, name: "Sontaya Petch Ang", avatar: sontaya, role: "Senior Customer Support Executive" },
+  {
+    id: 2,
+    name: "Sontaya Petch Ang",
+    avatar: sontaya,
+    role: "Senior Customer Support Executive",
+  },
   {
     id: 3,
     name: "Rocio Perez",
