@@ -54,7 +54,7 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
 
   const handleScroll = () => {
     console.log(app_right_ref.current.scrollTop);
-    if (app_right_ref.current.scrollTop > 400) {
+    if (app_right_ref.current.scrollTop > 300) {
       setShowReportInSidebar(true);
     } else {
       setShowReportInSidebar(false);

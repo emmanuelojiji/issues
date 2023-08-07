@@ -53,8 +53,8 @@ const Discussion = ({
                           message={reply.message}
                           avatarImage={userReply.avatar}
                           userId={userReply.id}
-                          replyToName={comment.name}
-                          replyToMessage={comment.message}
+                          replyToName={reply.name}
+                          replyToMessage={reply.message}
                         />
                       </div>
                     );
