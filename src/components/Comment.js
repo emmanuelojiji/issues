@@ -43,7 +43,7 @@ const Comment = ({
           </div>
         </div>
       </div>
-      <p>2:30</p>
+      <p>Mon Aug 07 2023</p>
     </div>
   );
 };
