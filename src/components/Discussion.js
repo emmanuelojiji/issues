@@ -12,11 +12,6 @@ const Discussion = ({
   commentId,
   selectedIssue,
 }) => {
-  const [replyToVisible, setReplyToVisible] = useState(false);
-
-  const [replyToName, setReplyToName] = useState();
-  const [replyToMessage, setReplyToMessage] = useState();
-
   return (
     <div className="comments-container main-container">
       {selectedIssue.discussions.map((discussionArray) =>
@@ -35,14 +30,10 @@ const Discussion = ({
                 message={comment.message}
                 avatarImage={user.avatar}
                 userId={user.id}
-                setReplyToVisible={setReplyToVisible}
                 amountOfReplies={comment.replies.length}
                 hasReplies={comment.replies}
-                replyOnClick={() => {
-                  setReplyToVisible(true);
-                  setReplyToName(comment.name);
-                  setReplyToMessage(comment.message);
-                }}
+                replyToName={comment.name}
+                replyToMessage={comment.message}
                 commentId={comment.commentId}
                 commentChildren={
                   comment.replies &&
@@ -62,11 +53,8 @@ const Discussion = ({
                           message={reply.message}
                           avatarImage={userReply.avatar}
                           userId={userReply.id}
-                          replyOnClick={() => {
-                            setReplyToVisible(true);
-                            setReplyToName(reply.name);
-                            setReplyToMessage(reply.message);
-                          }}
+                          replyToName={comment.name}
+                          replyToMessage={comment.message}
                         />
                       </div>
                     );
@@ -76,10 +64,6 @@ const Discussion = ({
             </div>
           );
         })
-      )}
-
-      {replyToVisible && (
-        <ReplyTo replyToName={replyToName} replyToMessage={replyToMessage} />
       )}
     </div>
   );

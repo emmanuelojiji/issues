@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Comment.scss";
 import Avatar from "./Avatar";
 import Reaction from "./Reaction";
+import ReplyTo from "./ReplyTo";
 
 const Comment = ({
   name,
@@ -17,8 +18,13 @@ const Comment = ({
   commentChildren,
   hasReplies,
   amountOfReplies,
+  replyToName,
+  replyToMessage,
 }) => {
   const [showReplies, setShowReplies] = useState(false);
+
+  const [replyToVisible, setReplyToVisible] = useState(false);
+
   return (
     <>
       <div className="comment-container" id={commentId}>
@@ -42,17 +48,27 @@ const Comment = ({
               style={{ display: replyContainerDisplay }}
             >
               {hasReplies && (
-                <h5 onClick={() => setShowReplies(!showReplies)}>
+                <h5
+                  class="show-hide-replies"
+                  onClick={() => setShowReplies(!showReplies)}
+                >
                   {showReplies
                     ? "Hide replies"
                     : `Show ${amountOfReplies} replies`}
                 </h5>
               )}
-              <h5 className="reply" onClick={replyOnClick}>
+              <h5 className="reply" onClick={() => setReplyToVisible(true)}>
                 Reply
               </h5>
               <Reaction />
             </div>
+
+            {replyToVisible && (
+              <ReplyTo
+                replyToName={replyToName}
+                replyToMessage={replyToMessage}
+              />
+            )}
           </div>
         </div>
         <p>Mon Aug 07 2023</p>

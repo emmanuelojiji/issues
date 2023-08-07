@@ -70,8 +70,7 @@ export const Issues = [
 
       [
         {
-          message:
-            "Second Comment here",
+          message: "Second Comment here",
           id: 3,
           name: "User",
           commentId: 3,
