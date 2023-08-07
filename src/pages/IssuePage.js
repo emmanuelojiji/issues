@@ -19,7 +19,7 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
 
   const selectedIssue = Issues.find((issue) => issue.id === id);
 
-  const selectedIssueDiscussions = selectedIssue.discussions;
+  const selectedIssueDiscussions = selectedIssue.discussions; 
 
   const userId = selectedIssueDiscussions?.map((comment) => comment.id);
 

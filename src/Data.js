@@ -43,54 +43,57 @@ export const Issues = [
     ],
 
     discussions: [
-      [
-        {
-          message:
-            "Hello, we have received this part from pos B-01 without a cover. Please check the pictures attached in the report.",
-          id: 1,
-          name: "Ali Alnaimi ",
-          commentId: 1,
-          replies: [
-            {
-              message:
-                "Customer won't accept that, please contact supplier for an exchange @sontaya.petch.ang",
-              id: 4,
-              name: "Clement Ng",
-              commentId: 2,
-            },
-            {
-              message: "@rocio.perez @kelvin.rhodes FYI",
-              id: 5,
-              name: "Patrick Weber",
-              commentId: 3,
-            },
-          ],
-        },
-      ],
+      {
+        message:
+          "Hello, we have received this part from pos B-01 without a cover. Please check the pictures attached in the report.",
+        id: 1,
+        name: "Ali Alnaimi ",
+        commentId: 1,
+        replies: [
+          {
+            message:
+              "Customer won't accept that, please contact supplier for an exchange @sontaya.petch.ang",
+            id: 4,
+            name: "Clement Ng",
+            commentId: 2,
+            replies: [
+              {
+                message:
+                  "Customer won't accept that, please contact supplier for an exchange @sontaya.petch.ang",
+                id: 4,
+                name: "Clement Ng",
+                commentId: 0,
+              },
+            ],
+          },
+        ],
+      },
 
-      [
-        {
-          message: "Second Comment here",
-          id: 3,
-          name: "User",
-          commentId: 3,
-          replies: [
-            {
-              message:
-                "Customer won't accept that, please contact supplier for an exchange @sontaya.petch.ang",
-              id: 4,
-              name: "Clement Ng",
-              commentId: 2,
-            },
-            {
-              message: "@rocio.perez @kelvin.rhodes FYI",
-              id: 5,
-              name: "Patrick Weber",
-              commentId: 3,
-            },
-          ],
-        },
-      ],
+      {
+        message:
+          "Hello, we have received this part from pos B-01 without a cover. Please check the pictures attached in the report.",
+        id: 1,
+        name: "Ali Alnaimi ",
+        commentId: 1,
+        replies: [
+          {
+            message:
+              "Customer won't accept that, please contact supplier for an exchange @sontaya.petch.ang",
+            id: 4,
+            name: "Clement Ng",
+            commentId: 2,
+            replies: [
+              {
+                message:
+                  "Customer won't accept that, please contact supplier for an exchange @sontaya.petch.ang",
+                id: 4,
+                name: "Clement Ng",
+                commentId: 0,
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
 
