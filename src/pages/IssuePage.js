@@ -158,9 +158,7 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
           <div className="discussion-container container">
             <div className="discussion-header">
               <h3 className="heading">Discussion</h3>
-              <button onClick={() => setNewDiscussionVisible(true)}>
-                Create new discussion
-              </button>
+              
             </div>
 
             {newDiscussionVisible && <NewDiscussion />}
