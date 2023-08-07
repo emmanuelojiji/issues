@@ -35,6 +35,7 @@ const Discussion = ({
               avatarImage={user.avatar}
               userId={user.id}
               setReplyToVisible={setReplyToVisible}
+              amountOfReplies={comment.replies.length}
               replyOnClick={() => {
                 setReplyToVisible(true);
                 setReplyToName(comment.name);

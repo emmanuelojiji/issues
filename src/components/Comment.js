@@ -15,6 +15,7 @@ const Comment = ({
   replyContainerDisplay,
   role,
   commentChildren,
+  amountOfReplies
 }) => {
   const [showReplies, setShowReplies] = useState(false);
   return (
@@ -40,7 +41,7 @@ const Comment = ({
               style={{ display: replyContainerDisplay }}
             >
               <h5 onClick={() => setShowReplies(!showReplies)}>
-                {showReplies ? "Hide replies" : "Show replies"}
+                {showReplies ? "Hide replies" : `Show ${amountOfReplies} replies`}
               </h5>
               <h5 className="reply" onClick={replyOnClick}>
                 Reply
