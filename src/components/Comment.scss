@@ -1,6 +1,7 @@
 .comment-container {
   display: flex;
   margin-bottom: 50px;
+  justify-content: space-between;
 
   &:last-child {
     margin-bottom: 0;
@@ -45,4 +46,8 @@
   background: #4740d23d;
   border-radius: 2em;
   font-size: 12px;
+}
+
+.avatar-right-wrap{
+  display: flex;
 }
