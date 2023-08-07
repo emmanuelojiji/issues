@@ -36,6 +36,7 @@ const Discussion = ({
               userId={user.id}
               setReplyToVisible={setReplyToVisible}
               amountOfReplies={comment.replies.length}
+              hasReplies={comment.replies}
               replyOnClick={() => {
                 setReplyToVisible(true);
                 setReplyToName(comment.name);
