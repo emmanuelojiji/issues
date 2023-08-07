@@ -71,10 +71,10 @@ export const Issues = [
       [
         {
           message:
-            "Hello, we have received this part from pos B-01 without a cover. Please check the pictures attached in the report.",
-          id: 1,
-          name: "Ali Alnaimi ",
-          commentId: 1,
+            "Second Comment here",
+          id: 3,
+          name: "User",
+          commentId: 3,
           replies: [
             {
               message:
