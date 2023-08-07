@@ -59,14 +59,29 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
     } else {
       setShowReportInSidebar(false);
     }
+
+    if (app_right_ref.current.scrollTop > 50) {
+      setShowScrollIndicator(false);
+    } else {
+      setShowScrollIndicator(true);
+    }
   };
 
   const app_right_ref = useRef();
 
   const [showReportInSidebar, setShowReportInSidebar] = useState(false);
 
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+
   return (
     <>
+      <div
+        className={`scroll-indicator ${
+          showScrollIndicator ? "slide-in" : "slide-out"
+        }`}
+      >
+        Scroll for discussion
+      </div>
       {userModalVisible && (
         <UserModal
           setUserModalVisible={setUserModalVisible}
