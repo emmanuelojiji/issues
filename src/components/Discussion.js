@@ -10,6 +10,7 @@ const Discussion = ({
   setSelectedUser,
   selectedUser,
   commentId,
+  selectedIssue,
 }) => {
   const [replyToVisivle, setReplyToVisible] = useState(false);
 
@@ -18,7 +19,7 @@ const Discussion = ({
 
   return (
     <div className="comments-container main-container ">
-      {discussion.map((comment) => {
+      {selectedIssue.discussions[0].map((comment) => {
         const user = Users.find((u) => u.id === comment.id);
 
         return (

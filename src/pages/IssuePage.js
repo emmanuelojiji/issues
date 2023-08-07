@@ -55,9 +55,9 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
   const handleScroll = () => {
     console.log(app_right_ref.current.scrollTop);
     if (app_right_ref.current.scrollTop > 400) {
-      setShowReportInSidebar(true)
+      setShowReportInSidebar(true);
     } else {
-      setShowReportInSidebar(false)
+      setShowReportInSidebar(false);
     }
   };
 
@@ -158,19 +158,16 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
           <div className="discussion-container container">
             <div className="discussion-header">
               <h3 className="heading">Discussion</h3>
-              
             </div>
 
             {newDiscussionVisible && <NewDiscussion />}
 
-            {selectedIssue.discussions?.map((discussion) => (
-              <Discussion
-                discussion={discussion}
-                setUserModalVisible={setUserModalVisible}
-                setSelectedUser={setSelectedUser}
-                selectedUser={selectedUser}
-              />
-            ))}
+            <Discussion
+              setUserModalVisible={setUserModalVisible}
+              setSelectedUser={setSelectedUser}
+              selectedUser={selectedUser}
+              selectedIssue={selectedIssue}
+            />
           </div>
         </div>
       </main>
