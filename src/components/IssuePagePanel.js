@@ -28,7 +28,11 @@ const IssuePagePanel = ({
         selectedUser={selectedUser}
         setSelectedUser={setSelectedUser}
       />
-      <div className={`side-report ${showReportInSidebar ? "expanded" : ""}`}>
+      <div
+        className={`side-report ${showReportInSidebar ? "expanded" : ""} ${
+          showReportInSidebar ? "marginTransition" : ""
+        }`}
+      >
         <h1>Report</h1>
         <h2>Wrong condition</h2>
         <h2>Additional info</h2>
@@ -40,8 +44,8 @@ const IssuePagePanel = ({
             elit ipsum, convallis id lectus id, fringilla euismod augue.
           </p>{" "}
         </div>
-        <span className="see-more" onClick={() => setMoreShown(true)}>
-          See more
+        <span className="see-more" onClick={() => setMoreShown(!moreShown)}>
+          {moreShown ? "See less" : "See more"}
         </span>
       </div>
       <Calendar
@@ -49,6 +53,7 @@ const IssuePagePanel = ({
         setUserModalVisible={setUserModalVisible}
         selectedUser={selectedUser}
         setSelectedUser={setSelectedUser}
+        showReportInSidebar={showReportInSidebar}
       />
     </aside>
   );

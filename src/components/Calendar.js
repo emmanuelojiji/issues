@@ -4,11 +4,21 @@ import { Users } from "../Users";
 import "./Calendar.scss";
 import DateCard from "./DateCard";
 
-const Calendar = ({ issueId, setUserModalVisible, setSelectedUser }) => {
+const Calendar = ({
+  issueId,
+  setUserModalVisible,
+  setSelectedUser,
+  showReportInSidebar,
+}) => {
   const selectedIssue = Issues.find((issue) => issue.id === issueId);
 
   return (
-    <div className="calendar">
+    <div
+      className="calendar"
+      style={{
+        transform: showReportInSidebar ? "translateY(0)" : "translateY(-30px)",
+      }}
+    >
       <div className="calendar-header">
         <h3>Calendar</h3>
         <p className="this-week">This week</p>
