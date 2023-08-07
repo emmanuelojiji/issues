@@ -6,8 +6,8 @@ import rocio from "./media/rocio.svg";
 import rob from "./media/rob.svg";
 
 export const Users = [
-  { id: 1, name: "Ali Alnaimi", avatar: ali, role: "Order Fulfilment Manager" },
-  { id: 2, name: "Sontaya", avatar: sontaya, role: "Order Fulfilment Manager" },
+  { id: 1, name: "Ali Alnaimi", avatar: ali, role: "Warehouse Operative" },
+  { id: 2, name: "Sontaya Petch Ang", avatar: sontaya, role: "Senior Customer Support Executive" },
   {
     id: 3,
     name: "Rocio Perez",
@@ -17,14 +17,14 @@ export const Users = [
   {
     id: 5,
     name: "Patrick Weber",
-    role: "Order Fulfilment Manager",
+    role: "Warehouse Manager",
     avatar: patrick,
     dates: ["2 - 3"],
   },
   {
     id: 4,
     name: "Clement ng",
-    role: "Order Fulfilment Manager",
+    role: "Account Manager",
     avatar: clement,
     dates: ["2 - 2", "10 - 11"],
   },
