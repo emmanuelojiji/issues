@@ -40,30 +40,33 @@ const Discussion = ({
                 setReplyToMessage(comment.message);
               }}
               commentId={comment.id}
+              commentChildren={
+                comment.replies &&
+                comment.replies.map((reply) => {
+                  const userReply = Users.find((user) => user.id === reply.id);
+                  return (
+                    <div className="replies-container">
+                      <Comment
+                        setUserModalVisible={setUserModalVisible}
+                        setSelectedUser={setSelectedUser}
+                        selecteduser={selectedUser}
+                        changeUser={userReply.id}
+                        name={reply.name}
+                        role={userReply.role}
+                        message={reply.message}
+                        avatarImage={userReply.avatar}
+                        userId={userReply.id}
+                        replyOnClick={() => {
+                          setReplyToVisible(true);
+                          setReplyToName(reply.name);
+                          setReplyToMessage(reply.message);
+                        }}
+                      />
+                    </div>
+                  );
+                })
+              }
             />
-
-            {comment.replies &&
-              comment.replies.map((reply) => {
-                const userReply = Users.find((user) => user.id === reply.id);
-                return (
-                  <Comment
-                    setUserModalVisible={setUserModalVisible}
-                    setSelectedUser={setSelectedUser}
-                    selecteduser={selectedUser}
-                    changeUser={userReply.id}
-                    name={reply.name}
-                    role={userReply.role}
-                    message={reply.message}
-                    avatarImage={userReply.avatar}
-                    userId={userReply.id}
-                    replyOnClick={() => {
-                      setReplyToVisible(true);
-                      setReplyToName(reply.name);
-                      setReplyToMessage(reply.message);
-                    }}
-                  />
-                );
-              })}
           </>
         );
       })}
