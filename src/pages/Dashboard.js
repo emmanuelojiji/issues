@@ -25,6 +25,20 @@ const Dashboard = () => {
   const issuesToDisplay =
     filteredIssues.length > 0 ? filteredIssueObjects : Issues;
 
+  const sortedNotifications = Notifications.slice().sort((a, b) => {
+    return new Date(b.date) - new Date(a.date);
+  });
+
+  const groupedNotifications = {};
+
+  sortedNotifications.forEach((notification) => {
+    const date = notification.date;
+    if (!groupedNotifications[date]) {
+      groupedNotifications[date] = [];
+    }
+    groupedNotifications[date].push(notification);
+  });
+
   return (
     <main className="row-container">
       <DashboardPanel
@@ -64,40 +78,19 @@ const Dashboard = () => {
             <h3 className="heading">Notifications</h3>
           </div>
 
-          {Notifications.map((notification) => {
-            return (
-              <>
-                {notification.type != "discussion" && (
+          <div className="notifications-container">
+            {Object.keys(groupedNotifications).map((date) => (
+              <div key={date}>
+                <h2>{date}</h2>
+                {groupedNotifications[date].map((notification, index) => (
                   <SystemNotification
                     message={notification.message}
                     type={notification.type}
                   />
-                )}
-
-                {notification.type === "discussion" &&
-                  notification.discussions.map((discussion) => {
-                    const originalUser = Users.find(
-                      (user) => user.id === discussion.id
-                    );
-                    const replyUser = Users.find(
-                      (user) => user.id === discussion.replies[0].id
-                    );
-                    return (
-                      <DiscussionNotification
-                        message={discussion.message}
-                        name={discussion.name}
-                        replyName={discussion.replies[0].name}
-                        replyMessage={discussion.replies[0].message}
-                        originalUserAvatarImage={originalUser.avatar}
-                        replyAvatarImage={replyUser.avatar}
-                        issueId={discussion.issueId}
-                        commentId={discussion.commentId}
-                      />
-                    );
-                  })}
-              </>
-            );
-          })}
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </main>

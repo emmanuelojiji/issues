@@ -1,7 +1,7 @@
 export const Notifications = [
   {
     type: "discussion",
-    date: new Date(),
+    date: "Today",
     discussions: [
       {
         message:
@@ -31,7 +31,7 @@ export const Notifications = [
   {
     type: "tracking_email_sent",
     message: <p>Tracking Email sent</p>,
-    date: new Date(),
+    date: "Wed Aug 02 2023",
   },
 
   {
@@ -41,7 +41,7 @@ export const Notifications = [
         <b>Sontaya</b> marked <b>Wrong Condition</b> as <b></b>Closed
       </p>
     ),
-    date: "May 21 2023",
+    date: "Mon Aug 07 2023",
   },
 
   {
@@ -51,7 +51,7 @@ export const Notifications = [
         <b>Sontaya</b> marked <b>Wrong Condition</b> as <b>Resolved</b>
       </p>
     ),
-    date: "May 20 2023",
+    date: "Wed Aug 02 2023",
   },
 
   {
@@ -63,6 +63,6 @@ export const Notifications = [
         <b>1FT-5066-1AF71-3EB0 1FT5044-1AF71-3EB0.</b>
       </p>
     ),
-    date: "May 18 2023",
+    date: "Tue Aug 01 2023",
   },
 ];
