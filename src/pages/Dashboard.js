@@ -85,15 +85,38 @@ const Dashboard = () => {
                 {groupedNotifications[date].map((notification, index) => (
                   <div key={index}>
                     {notification.type === "discussion" ? (
-                      notification.discussions.map((discussion) => (
-                        <DiscussionNotification
-                          key={discussion.id}
-                          name={discussion.name}
-                          message={discussion.message}
-                          replyName={discussion.replies[0].name}
-                          replyMessage={discussion.replies[0].message}
-                        />
-                      ))
+                      notification.discussions.map(
+                        (discussion, discussionIndex) => {
+                          const firstMessageId = discussion.id;
+                          const firstReply = discussion.replies[0];
+
+                          const originalUser = Users.find(
+                            (user) => user.id === firstMessageId
+                          );
+
+                          const replyUser = Users.find(
+                            (user) =>
+                              user.id === (firstReply ? firstReply.id : null)
+                          );
+
+                          return (
+                            <div key={discussionIndex}>
+                              <DiscussionNotification
+                                name={discussion.name}
+                                message={discussion.message}
+                                replyName={firstReply ? firstReply.name : null}
+                                replyMessage={
+                                  firstReply ? firstReply.message : null
+                                }
+                                issueId={discussion.issueId}
+                                commentId={discussion.commentId}
+                                originalUserAvatarImage={originalUser.avatar}
+                                replyAvatarImage={replyUser.avatar}
+                              />
+                            </div>
+                          );
+                        }
+                      )
                     ) : (
                       <Notification
                         notification_type={notification.type}
