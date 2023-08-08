@@ -36,21 +36,25 @@ const IssuePagePanel = ({
           showReportInSidebar ? "marginTransition" : ""
         }`}
       >
-        <h1>Report</h1>
-        <h2>{selectedIssue.title}</h2>
-        <h2>Additional info</h2>
+        <h2 className="side-report-heading">Report</h2>
+        <h3 className="side-report-heading">{selectedIssue.title}</h3>
+      
         <div className={`text-container ${moreShown ? "text-expanded" : ""}`}>
-          <p>
+        <div className="side-report-field">
+        <h3 className="side-report-heading">Additional info</h3>
+          <p className="additional-info">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
             dolor lacus. Integer vitae rhoncus odio, vel ultricies eros. Proin
             libero eros, pretium at volutpat pretium, iaculis ut lectus. Mauris
             elit ipsum, convallis id lectus id, fringilla euismod augue.
-          </p>{" "}
+          </p></div>
           {selectedIssue.fields.map((field) => (
-            <>
-              <h2>{field.heading}</h2>
-              <p>{field.content}</p>
-            </>
+            <div className="side-report-field">
+              <h3 className="side-report-heading">{field.heading}</h3>
+              <p style={{ color: issueResolved ? "#60a350" : "#E3144B" }}>
+                {field.content}
+              </p>
+            </div>
           ))}
         </div>
         <span className="see-more" onClick={() => setMoreShown(!moreShown)}>
