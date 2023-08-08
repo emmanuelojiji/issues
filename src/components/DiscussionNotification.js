@@ -13,16 +13,22 @@ const DiscussionNotification = ({
   replyAvatarImage,
   issueId,
   commentId,
+  replyUserRole,
+  originalUserRole,
 }) => {
   return (
-    <Link to={`issue/${issueId}/#${commentId}`} className="discussion-notification">
+    <Link
+      to={`issue/${issueId}/#${commentId}`}
+      className="discussion-notification"
+    >
       <div className="discussion-notification-original">
-        <img src={icon_comment} className="icon"/>
+        <img src={icon_comment} className="icon" />
         <Comment
           name={name}
           message={message}
           avatarImage={originalUserAvatarImage}
           replyContainerDisplay="none"
+          role={originalUserRole}
         />
       </div>
       <div className="discussion-notification-reply">
@@ -31,6 +37,7 @@ const DiscussionNotification = ({
           message={replyMessage}
           avatarImage={replyAvatarImage}
           replyContainerDisplay="none"
+          role={replyUserRole}
         />
       </div>
     </Link>

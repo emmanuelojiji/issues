@@ -112,6 +112,8 @@ const Dashboard = () => {
                                 commentId={discussion.commentId}
                                 originalUserAvatarImage={originalUser.avatar}
                                 replyAvatarImage={replyUser.avatar}
+                                originalUserRole={originalUser.role}
+                                replyUserRole={replyUser.role}
                               />
                             </div>
                           );
