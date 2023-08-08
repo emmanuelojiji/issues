@@ -7,7 +7,7 @@ import ToDoItem from "../components/ToDoItem";
 import { Issues, ToDos } from "../Data";
 import "./IssuePage.scss";
 import "./Dashboard.scss";
-import SystemNotification from "../components/Notification";
+import Notification from "../components/Notification";
 import { Notifications } from "../Notifications";
 import ToDoList from "../components/ToDoList";
 import DiscussionNotification from "../components/DiscussionNotification";
@@ -83,10 +83,25 @@ const Dashboard = () => {
               <div key={date}>
                 <h2>{date}</h2>
                 {groupedNotifications[date].map((notification, index) => (
-                  <SystemNotification
-                    message={notification.message}
-                    type={notification.type}
-                  />
+                  <div key={index}>
+                    {notification.type === "discussion" ? (
+                      notification.discussions.map((discussion) => (
+                        <DiscussionNotification
+                          key={discussion.id}
+                          name={discussion.name}
+                          message={discussion.message}
+                          replyName={discussion.replies[0].name}
+                          replyMessage={discussion.replies[0].message}
+                        />
+                      ))
+                    ) : (
+                      <Notification
+                        notification_type={notification.type}
+                        system_type={notification.system_type}
+                        message={notification.message}
+                      />
+                    )}
+                  </div>
                 ))}
               </div>
             ))}
