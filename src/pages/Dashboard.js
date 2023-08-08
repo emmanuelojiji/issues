@@ -81,7 +81,7 @@ const Dashboard = () => {
           <div className="notifications-container">
             {Object.keys(groupedNotifications).map((date) => (
               <div key={date}>
-                <h2>{date}</h2>
+                <h3 className="notification-date">{date}</h3>
                 {groupedNotifications[date].map((notification, index) => (
                   <div key={index}>
                     {notification.type === "discussion" ? (
