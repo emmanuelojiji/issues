@@ -18,7 +18,7 @@ const Discussion = ({
         const user = Users.find((u) => u.id === comment.id);
 
         return (
-          <div key={comment.commentId}>
+          <div key={comment.commentId} className="comment-comment-reply-container">
             <Comment
               setUserModalVisible={setUserModalVisible}
               setSelectedUser={setSelectedUser}

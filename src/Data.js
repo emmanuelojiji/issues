@@ -71,7 +71,7 @@ export const Issues = [
 
       {
         message:
-          "Can someone ensure pick this up next week. I'll be on holiday.",
+          "Can someone ensure this is picked up next week. I'll be on holiday.",
         id: 3,
         name: "Rocio Perez Garcia",
         commentId: 3,
