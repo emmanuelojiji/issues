@@ -7,6 +7,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: 0.2s ease-in-out;
+
+  &.fade-out {
+    opacity: 0.5;
+  }
 }
 
 .to-do-item-circle {
@@ -17,8 +22,11 @@
   transition: 0.2s ease-in-out;
   cursor: pointer;
 
-  &.complete, &:hover {
+  &.complete,
+  &:hover {
     background: #60a350;
     border: solid 1px #60a350;
   }
+
+
 }
