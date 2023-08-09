@@ -57,6 +57,7 @@ const IssuePagePanel = ({
             </div>
           ))}
         </div>
+
         <span className="see-more" onClick={() => setMoreShown(!moreShown)}>
           {moreShown ? "See less" : "See more"}
         </span>

@@ -46,6 +46,9 @@
   background: #161e28;
   padding: 45px;
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .part-container {
