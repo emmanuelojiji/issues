@@ -18,6 +18,7 @@ const ToDoList = () => {
             placeholder="Start typing.."
             className="new-to-do-input"
           ></input>
+          <button> Add</button>
         </div>
     
 
