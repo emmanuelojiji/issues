@@ -19,6 +19,8 @@ const DashboardPanel = ({
     console.log(filteredIssues);
   };
 
+
+
   return (
     <aside className="panel">
       <h2>Issues Board</h2>

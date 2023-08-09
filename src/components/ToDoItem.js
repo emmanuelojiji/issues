@@ -4,6 +4,8 @@ import "./ToDoItem.scss";
 const ToDoItem = ({ text, amount, setAmount }) => {
   const [complete, setComplete] = useState(false);
 
+ 
+
   return (
     <div className={`to-do-item ${complete ? "fade-out" : null}`}>
       <p>{text}</p>

@@ -153,6 +153,8 @@ const IssuePage = ({ selectedUser, setSelectedUser }) => {
               </p>
             </div>
 
+  
+
             <div className="attachments">
               <h3 className="sub-heading">Attachments</h3>
               {selectedIssue.attachments?.map((image) => (
