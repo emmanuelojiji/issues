@@ -71,26 +71,17 @@ export const Issues = [
 
       {
         message:
-          "Hello, we have received this part from pos B-01 without a cover. Please check the pictures attached in the report.",
-        id: 1,
-        name: "Ali Alnaimi ",
-        commentId: 1,
+          "Can someone ensure pick this up next week. I'll be on holiday.",
+        id: 3,
+        name: "Rocio Perez Garcia",
+        commentId: 3,
         replies: [
           {
-            message:
-              "Customer won't accept that, please contact supplier for an exchange @sontaya.petch.ang",
+            message: "No worries. I'll get it sorted.",
             id: 4,
             name: "Clement Ng",
             commentId: 2,
-            replies: [
-              {
-                message:
-                  "Customer won't accept that, please contact supplier for an exchange @sontaya.petch.ang",
-                id: 4,
-                name: "Clement Ng",
-                commentId: 0,
-              },
-            ],
+            replies: [],
           },
         ],
       },

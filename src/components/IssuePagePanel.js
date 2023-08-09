@@ -37,7 +37,7 @@ const IssuePagePanel = ({
         }`}
       >
         <h2 className="side-report-heading">Report</h2>
-        <h3 className="side-report-heading">{selectedIssue.title}</h3>
+      
       
         <div className={`text-container ${moreShown ? "text-expanded" : ""}`}>
         <div className="side-report-field">
