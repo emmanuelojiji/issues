@@ -14,4 +14,11 @@
   width: 20px;
   border-radius: 100%;
   border:solid 1px #007AD4;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover{
+    background: #60a350;
+    border: solid 1px #60a350;
+  }
 }
