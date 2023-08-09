@@ -6,6 +6,9 @@
   max-height: 0;
   visibility: hidden;
   opacity: 0;
+  background: #161e28;
+  border-radius: 15px;
+  padding: 30px;
 
   transition: max-height 0.3s ease-in-out, visibility 0s linear 0.3s,
     opacity 0.3s ease-in-out;
@@ -50,7 +53,11 @@
   margin-bottom: 10px;
 }
 
-.side-report-heading {
+.side-report-heading{
+  margin-bottom: 15px;
+}
+
+.side-report-sub-heading {
   margin-bottom: 5px;
 }
 

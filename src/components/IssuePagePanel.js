@@ -36,12 +36,12 @@ const IssuePagePanel = ({
           showReportInSidebar ? "marginTransition" : ""
         }`}
       >
-        <h2 className="side-report-heading">Report</h2>
+        <h3 className="side-report-heading">Report</h3>
       
       
         <div className={`text-container ${moreShown ? "text-expanded" : ""}`}>
         <div className="side-report-field">
-        <h3 className="side-report-heading">Additional info</h3>
+        <h3 className="side-report-sub-heading">Additional info</h3>
           <p className="additional-info">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
             dolor lacus. Integer vitae rhoncus odio, vel ultricies eros. Proin
@@ -50,7 +50,7 @@ const IssuePagePanel = ({
           </p></div>
           {selectedIssue.fields.map((field) => (
             <div className="side-report-field">
-              <h3 className="side-report-heading">{field.heading}</h3>
+              <h3 className="side-report-sub-heading">{field.heading}</h3>
               <p style={{ color: issueResolved ? "#60a350" : "#E3144B" }}>
                 {field.content}
               </p>
