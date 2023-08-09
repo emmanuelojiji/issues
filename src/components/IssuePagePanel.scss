@@ -8,7 +8,6 @@
   opacity: 0;
   background: #161e28;
   border-radius: 15px;
-  padding: 30px;
 
   transition: max-height 0.3s ease-in-out, visibility 0s linear 0.3s,
     opacity 0.3s ease-in-out;
@@ -16,6 +15,10 @@
   p {
     display: block;
     transition: 0.3s ease-in-out;
+  }
+
+  .side-report-content {
+    padding: 30px;
   }
 }
 
@@ -53,7 +56,7 @@
   margin-bottom: 10px;
 }
 
-.side-report-heading{
+.side-report-heading {
   margin-bottom: 15px;
 }
 

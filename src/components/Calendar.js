@@ -15,9 +15,7 @@ const Calendar = ({
   return (
     <div
       className="calendar"
-      style={{
-        transform: showReportInSidebar ? "translateY(0)" : "translateY(-30px)",
-      }}
+      
     >
       <div className="calendar-header">
         <h3>Calendar</h3>

@@ -36,31 +36,34 @@ const IssuePagePanel = ({
           showReportInSidebar ? "marginTransition" : ""
         }`}
       >
-        <h3 className="side-report-heading">Report</h3>
-      
-      
-        <div className={`text-container ${moreShown ? "text-expanded" : ""}`}>
-        <div className="side-report-field">
-        <h3 className="side-report-sub-heading">Additional info</h3>
-          <p className="additional-info">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
-            dolor lacus. Integer vitae rhoncus odio, vel ultricies eros. Proin
-            libero eros, pretium at volutpat pretium, iaculis ut lectus. Mauris
-            elit ipsum, convallis id lectus id, fringilla euismod augue.
-          </p></div>
-          {selectedIssue.fields.map((field) => (
+        <div className="side-report-content">
+          <h3 className="side-report-heading">Report</h3>
+
+          <div className={`text-container ${moreShown ? "text-expanded" : ""}`}>
             <div className="side-report-field">
-              <h3 className="side-report-sub-heading">{field.heading}</h3>
-              <p style={{ color: issueResolved ? "#60a350" : "#E3144B" }}>
-                {field.content}
+              <h3 className="side-report-sub-heading">Additional info</h3>
+              <p className="additional-info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                eget dolor lacus. Integer vitae rhoncus odio, vel ultricies
+                eros. Proin libero eros, pretium at volutpat pretium, iaculis ut
+                lectus. Mauris elit ipsum, convallis id lectus id, fringilla
+                euismod augue.
               </p>
             </div>
-          ))}
-        </div>
+            {selectedIssue.fields.map((field) => (
+              <div className="side-report-field">
+                <h3 className="side-report-sub-heading">{field.heading}</h3>
+                <p style={{ color: issueResolved ? "#60a350" : "#E3144B" }}>
+                  {field.content}
+                </p>
+              </div>
+            ))}
+          </div>
 
-        <span className="see-more" onClick={() => setMoreShown(!moreShown)}>
-          {moreShown ? "See less" : "See more"}
-        </span>
+          <span className="see-more" onClick={() => setMoreShown(!moreShown)}>
+            {moreShown ? "See less" : "See more"}
+          </span>
+        </div>
       </div>
       <Calendar
         issueId={issueId}
