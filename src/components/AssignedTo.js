@@ -12,11 +12,14 @@ const AssignedTo = ({ setUserModalVisible, setSelectedUser }) => {
 
   useEffect(() => {
     if (splitUrl.length === 6) {
-      setId(splitUrl[5]);
+      setId(splitUrl[4]);
     } else {
       setId(splitUrl.pop());
     }
+   
   }, [splitUrl]);
+
+  console.log(splitUrl)
 
   const targetIssue = Issues.find((issue) => issue.id === id);
 
